@@ -4,7 +4,7 @@ function starwarsSearch(){
     let search = document.getElementById('search').value;
     let selection = select;
     let input = search;
-    fetch(`https://swapi.dev/api/${selection}/${input}`)
+    fetch(`https://swapi.dev/api/${select}/?search=${search}`)
     
     .then(response => {
         if(response.ok) {
