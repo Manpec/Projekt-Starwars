@@ -43,9 +43,6 @@ function starwarsSearch(){
     else if(selection == 'vehicles') {  
         return document.getElementById("result").innerHTML=`<br><h2>${dataSelection.name}</h2><br><h4>Model: ${dataSelection.model}</h4><br><br>Manufacturer: ${dataSelection.manufacturer}`  
     }
-    else if(selection == 'people') {  
-        return document.getElementById("result").innerHTML=`<br><h2>${dataSelection.name}</h2><br><h4>gender: ${dataSelection.gender}</h4><br><br>Height: ${dataSelection.height} cm`  
-    }
 
 })
 
