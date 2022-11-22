@@ -15,4 +15,8 @@ function starwarsSearch(){
             console.log(data) 
          document.getElementById("result").innerHTML=`${data.name}`  
 })
+.catch(data => {
+ 
+ document.getElementById("result").innerHTML=`ERROR number does not exist, try another number`  
+})
 }
