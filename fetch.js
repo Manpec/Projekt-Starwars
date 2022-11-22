@@ -39,4 +39,4 @@ function starwarsSearch() {
         "result"
       ).innerHTML = `ERROR number does not exist, try another number`;
     });
-
+  }
