@@ -1,0 +1,18 @@
+* {
+    text-align: center;
+    background-color: black;
+    color: yellow;
+}
+
+header{
+padding: 30;
+}
+input{
+    border: solid 3px yellow;
+}
+select{
+    border: solid 3px yellow;
+}
+#searchBtn{
+    border: solid 3px yellow;
+}
