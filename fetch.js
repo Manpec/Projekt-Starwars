@@ -1,5 +1,6 @@
 addCategoriesToSelection();
 
+
 function addCategoriesToSelection() {
   fetch("https://swapi.dev/api/")
     .then((response) => {
@@ -23,7 +24,7 @@ function starwarsSearch() {
   console.log(search);
   let selection = select;
   let input = search;
-  fetch(`https://swapi.dev/api/${selection}/${input}`)
+  fetch(`https://swapi.dev/api/${select}/?search=${search}`)
     .then((response) => {
       if (response.ok) {
         return response.json();
@@ -38,4 +39,4 @@ function starwarsSearch() {
         "result"
       ).innerHTML = `ERROR number does not exist, try another number`;
     });
-}
+
