@@ -82,20 +82,4 @@ function starwarsSearch() {
     
     
   }
-  /*
-  var loader = document.getElementById('loader');
-  var loader2 = document.getElementById('loader2');
-
-  var loaderBtn = document.getElementById('loader_Btn');
-  var loader2Btn = document.getElementById('loader2_Btn');
-
-  loaderBtn.onclick = function() {
-     loader.setAttribute('class', 'hidden');
-      loader2.setAttribute('class', 'visible');
-  };
-
-  loader2Btn.onclick = function() {
-      loader2Btn.setAttribute('class', 'hidden');
-      loaderBtn.setAttribute('class', 'visible');
-  };
-  */
+ 
