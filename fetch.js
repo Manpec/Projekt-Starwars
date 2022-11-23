@@ -25,7 +25,7 @@ function starwarsSearch() {
   console.log(search);
   let result = document.getElementById('result');
   let input = document.getElementById('search');
-  input.value = '';
+  input.value = ''; // Clears input field after searching
   fetch(`https://swapi.dev/api/${select}/?search=${search}`)
     .then((response) => {
       if (response.ok) {
@@ -58,7 +58,7 @@ function renderData(data, option) {
       break;
     case 'species':
       for (let i = 0; i < data.length; i++) {
-        renderResults.innerHTML += `<div class='renderContent'><p>Name: ${data[i].name}</p><p>Classification: ${data[i].classification}</p><p>Designation: ${data[i].designation}</p><a href="#">More</a></div>`;
+        renderResults.innerHTML += `<div class='renderContent'><p>Name: ${data[i].name}</p><p>Classification: ${data[i].classification}</p><p>Language: ${data[i].language}</p><a href="#">More</a></div>`;
       }
       break;
     case 'planets':
