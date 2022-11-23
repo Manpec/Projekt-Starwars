@@ -1,8 +1,12 @@
+let api = 'https://swapi.dev/api/'
+
+
+
 addCategoriesToSelection();
 
 
 function addCategoriesToSelection() {
-  fetch("https://swapi.dev/api/")
+  fetch(api)
     .then((response) => {
       if (response.ok) {
         return response.json();
@@ -22,7 +26,7 @@ function starwarsSearch() {
   console.log(select);
   let search = document.getElementById("search").value;
   console.log(search);
-  fetch(`https://swapi.dev/api/${select}/?search=${search}`)
+  fetch(`${api}${select}/?search=${search}`)
     .then((response) => {
       if (response.ok) {
         return response.json();
@@ -42,7 +46,7 @@ function starwarsSearch() {
       case 'starships':
                 for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
                   renderResults.innerHTML += 
-                  `<div class='renderContent'><p>Name: ${data[i].name}</p><p>Model: ${data[i].model}</p><p>Manufacturer: ${data[i].manufacturer}</p>`  //renders all the results
+                  `<div class='renderContent'><p>Name: ${data[i].name}</p><p>Model: ${data[i].model}</p><p>Manufacturer: ${data[i].manufacturer}</p></div>`  //renders all the results
                   
                   
                 }
@@ -51,7 +55,7 @@ function starwarsSearch() {
         case 'vehicles':
           for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
             renderResults.innerHTML += 
-            `<div class='renderContent'><p>Name: ${data[i].name}</p><p>Model: ${data[i].model}</p><p>Manufacturer: ${data[i].manufacturer}</p>`  //renders all the results
+            `<div class='renderContent'><p>Name: ${data[i].name}</p><p>Model: ${data[i].model}</p><p>Manufacturer: ${data[i].manufacturer}</p></div>`  //renders all the results
             
             
           }
@@ -59,13 +63,11 @@ function starwarsSearch() {
           case 'films':
             for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
               renderResults.innerHTML += 
-              `<div class='renderContent'><div class='star-wars'><div class='effect'><p> EPISODE: ${data[i].episode_id}</p><p>TITLE: ${data[i].title}</p><p> ${data[i].opening_crawl}</div></div></p>`  //renders all the results
+              `<div class='renderContent'><div class="star-wars"><div class="crawl"><p><h1>EPISODE: ${data[i].episode_id}</h1></p><p><h3>TITLE: ${data[i].title}</h3<br><br></p><p> ${data[i].opening_crawl}</p></div></div></div>`  //renders all the results
             }
       default:
         break;
     }
+
     
-
-
-
   }
