@@ -22,8 +22,8 @@ function starwarsSearch() {
   console.log(select);
   let search = document.getElementById("search").value;
   console.log(search);
-  let selection = select;
-  let input = search;
+  //let selection = select;
+  //let input = search;
   fetch(`https://swapi.dev/api/${select}/?search=${search}`)
     .then((response) => {
       if (response.ok) {
@@ -31,12 +31,36 @@ function starwarsSearch() {
       }
     })
     .then((data) => {
-      console.log(data);
-      document.getElementById("result").innerHTML = `${data.name}`;
+      console.log('data',data.results);
+      renderData(data.results, select)
     })
-    .catch((data) => {
-      document.getElementById(
-        "result"
-      ).innerHTML = `ERROR number does not exist, try another number`;
-    });
+    
+  
+  
+
+  //results.values(data)
+
+  }
+
+  function renderData (data, option){
+   let renderResults = document.getElementById("result")
+   renderResults.innerHTML='' //Resets the innerHTML to prevent previous searches to render on the website
+    switch (option) {
+      case 'starships':
+                for (let i = 0; i < data.length; i++) {
+                  renderResults.innerHTML += 
+                  `<div class='renderContent'><p>${data[i].name}</p><p>Model: ${data[i].model}</p><p>Manufacturer: ${data[i].manufacturer}</p>`  
+                  
+                  
+                }
+               
+        break;
+    
+      default:
+        break;
+    }
+    
+
+
+
   }
