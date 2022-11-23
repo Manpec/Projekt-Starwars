@@ -74,9 +74,7 @@ function starwarsSearch() {
               `<div class='renderContent'><div class="star-wars"><div class="crawl"><p><h1>EPISODE: ${data[i].episode_id}</h1></p><p><h3>TITLE: ${data[i].title}</h3<br><br></p><p> ${data[i].opening_crawl}</p></div></div></div>`  //renders all the results
             }
             default:
-                renderResults.innerHTML += 
-                `<div class='renderContent'><h1>ERROR</h1><br><br>Try a different search</div><br>`  //Text if nothing found
-              
+
               break;
     }
     
