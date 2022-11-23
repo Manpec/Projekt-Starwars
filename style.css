@@ -5,7 +5,8 @@
 }
 
 header{
-padding: 30;
+padding: 60;
+
 }
 input{
     border: solid 3px yellow;
@@ -15,4 +16,17 @@ select{
 }
 #searchBtn{
     border: solid 3px yellow;
+}
+li{
+    list-style: none;
+}
+footer{
+    display: flex;
+}
+
+#result div{
+    margin: auto;
+    width: 80%;
+    border: 1px solid yellow;
+    
 }

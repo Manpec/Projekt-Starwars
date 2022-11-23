@@ -9,17 +9,23 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <title>Star Wars</title>
 </head>
-<header><div id="header"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png" width="400px" alt=""></header>
-</div>
+
+
 <body>
-<main>
-    <input type="text" id="search">
+    <header><div id="header"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png" width="400px" alt="">
+    </div>  
+      <input type="text" id="search">
     <select name="" id="select">
 
     </select>
     <button id="searchBtn" class="btn"  onclick="starwarsSearch()">Search</button>
-    <div id="result"></div>
+</header>
+    
+<main>
+<div id="result"></div>
+
 </main>
+
 <script src="fetch.js"></script>
 </body>
 </html>
