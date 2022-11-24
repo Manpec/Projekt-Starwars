@@ -1,50 +1,55 @@
 * {
-    text-align: center;
-    background-color: black;
-    color: yellow;
-    margin: auto;
+  text-align: center;
+  background-color: black;
+  color: yellow;
+  margin: auto;
+}
+a{
+  color: yellow;
 }
 
-header{
-padding: 60;
-
-
+header {
+  padding: 60;
 }
-#header{
+#header {
   z-index: 1000;
   position: relative;
   display: flex;
- 
-  
 }
-#searchHeader{
+#searchHeader {
   display: flex;
   flex-direction: column;
+  
 }
-input{
-    border: solid 3px yellow;
+select {
+  margin: 5px;
 }
-select{
-    border: solid 3px yellow;
+button {
+  margin: 5px;
 }
-#searchBtn{
-    border: solid 3px yellow;
-    color: yellow;
+input {
+  border: solid 3px yellow;
+  margin: 5px;
 }
-li{
-    list-style: none;
+select {
+  border: solid 3px yellow;
 }
-footer{
-    display: flex;
+#searchBtn {
+  border: solid 3px yellow;
+  color: yellow;
+}
+li {
+  list-style: none;
+}
+footer {
+  display: flex;
 }
 
 #result {
-
-    min-height: 200px;
-    margin: auto;
-    width: 80%;
-   border: 1px solid yellow;
-    
+  min-height: 200px;
+  margin: auto;
+  width: 80%;
+  border: 1px solid yellow;
 }
 
 body {
@@ -52,61 +57,67 @@ body {
 }
 
 .star-wars {
-    display: flex;
-    justify-content: center;
-    height: 800px;
-    perspective: 400px;
-    font-family: 'Pathway Gothic One', sans-serif;
-    font-size: 100%;
-    font-weight: 600;
-    letter-spacing: 6px;
-    
-    text-align: justify;
-  }
-  .crawl {
-    position: relative;
-    top: 30px;
-    transform-origin: 50% 100%;
-  }
+  display: flex;
+  justify-content: center;
+  height: 800px;
+  perspective: 400px;
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 100%;
+  font-weight: 600;
+  letter-spacing: 6px;
+
+  text-align: justify;
+}
+.crawl {
+  position: relative;
+  top: 30px;
+  transform-origin: 50% 100%;
+}
 
 @keyframes crawl {
-    0% {
-      top: 0;
-      transform: rotateX(20deg) translateZ(0);
-    }
-    100% { 
-      top: -5000px;
-      transform: rotateX(25deg) translateZ(-2500px);
-    }
+  0% {
+    top: 0;
+    transform: rotateX(20deg) translateZ(0);
   }
-  .crawl {
-    position: absolute;
-    transform-origin: 50% 100%;
-    animation: crawl 20s linear;
+  100% {
+    top: -5000px;
+    transform: rotateX(25deg) translateZ(-2500px);
   }
-  .boxLoading {
-    margin: auto;
-    border: 16px solid #f3f3f3; 
-    border-top: 16px solid yellow; 
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-  }
-  .loading{
-    display: hidden;
-  }
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-.vehicles{
-display: flex;
-border-bottom: 1px solid yellow;
 }
-.vehicles p{
+.crawl {
+  position: absolute;
+  transform-origin: 50% 100%;
+  animation: crawl 20s linear;
+}
+.boxLoading {
+  margin: auto;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid yellow;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+.loading {
+  display: hidden;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.vehicles {
+  display: flex;
+  border-bottom: 1px solid yellow;
+}
+.vehicles p {
   text-align: right;
   margin: 5px;
   padding: 20px;
-
+}
+#errorDiv h1 {
+  color: red;
 }

@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <title>Star Wars</title>
-    <style type="text/css">
+    <style type="text/css"></style>
+  </head>
 
-   </style>
-</head>
+  <body>
+    <header>
+      <div id="header">
+        <div id="logo">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png"
+            width="400px"
+            alt=""
+          />
+        </div>
+        <div id="searchHeader">
+          <input type="search" id="search" placeholder="enter search" />
+          <select name="" id="select"></select>
+          <button id="searchBtn" class="btn" onclick="starwarsSearch()">
+            Search
+          </button>
+        </div>
+      </div>
+    </header>
 
-
-<body>
-    <header><div id="header"><div id="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png" width="400px" alt="">
-    </div> 
-    <div id="searchHeader">
-      <input type="search" id="search" placeholder="enter search">
-    <select name="" id="select">
-
-    </select>
-    <button id="searchBtn" class="btn"  onclick="starwarsSearch()">Search</button>
-  </div> 
-  </div>
-</header>
-    
-<main>
-
-  <div id="loading">
-  </div>
-<div id="result"></div>
-<div id="hej"></div>
-</main>
-<script src="categories.js"></script>
-<script src="fetch.js"></script>
-<script src="switch.js"></script>
-<script src="error.js"></script>
-</body>
+    <main>
+      <div id="loading"></div>
+      <div id="result"></div>
+      
+    </main>
+    <script src="categories.js"></script>
+    <script src="fetch.js"></script>
+    <script src="switch.js"></script>
+    <script src="error.js"></script>
+  </body>
 </html>
