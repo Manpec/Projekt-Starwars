@@ -11,24 +11,18 @@
 
 ## TODO
 
-- Layout
-- Få tag i search info
-- Drop down meny
-- AJAX-call för de olika kategorierna
-- Spinner-funktion
-- Resultatlista
-- Detaljlista
+- Layout första sidan så det blir en lista // Antonia 
+- Detaljlista // Josefine
+- more länken // Josefine 
+- eventlistner bort från HTML // Marcus 
+- Ta bort ERROR fil från main. 
 
-Vi ska göra API anrop genom att använda fetch och promises.
+Vi satsar på att bli klara med detta till måndag och har ett nytt möte.
 
-I vår dropdown meny kan man välja mellan olika kategorier, vi har alla ansvar för varsin kategori
+Efterhand man blir klar med saker kommer nya uppgifter dyka upp. 
 
-- Persons, Antonia
-- Planets, Josefine
-- Spaceships, Mana
-- Species, Louice
-- Films, Marcus
+Om du fastnar tveka inte att be om hjälp.
 
-Dessa ska skrivas i separata filer där koden för vad som sker när den kategorin är vald i dropdownmenyn. Alltså fetch osv.
-
-Vi satsar på att bli klara med detta till måndag, blir man klar innan och vill göra något mer, hör av dig till gruppen och välj ut en del av uppgiften att fortsätta på. Om du fastnar tveka inte att be om hjälp.
+## Innan inlämning
+- Gå genom uppgiften tillsammans så alla förstår vad som gjorts.
+- Se över så all kod är enkel och läsbar samt enhetlig enligt instruktion. 
