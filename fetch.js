@@ -1,4 +1,4 @@
-
+document.getElementById("searchBtn").addEventListener("click", starwarsSearch);
 
 function starwarsSearch() {
   let loader = `<div class="boxLoading"></div>`;//loader gets html
@@ -27,5 +27,4 @@ function starwarsSearch() {
       document.getElementById('loading').innerHTML = ``;//removes html from id loading when call is done
     });
 }
-
 
