@@ -13,9 +13,18 @@ function renderData(data, option) {
             <p>Name: ${data[i].name}</p>
             <p>Model: ${data[i].model}</p>
             <p>Manufacturer: ${data[i].manufacturer}</p>
-            <a href="#">More</a>
-        </div>`; //renders all the results
+            <button class="moreBtn" id=${i}>More</button>
+        </div>`;
       }
+
+        // Adding eventlisteners to every moreBtn
+        document.querySelectorAll('.moreBtn').forEach(button => {
+          button.addEventListener('click', () => {
+            //sends the data and the id of the button that is clicked.
+            showDetailInfoStarships(data, button.id);
+          });
+        });
+      
       break;
     case 'species':
       for (let i = 0; i < data.length; i++) {
@@ -24,9 +33,18 @@ function renderData(data, option) {
             <p>Name: ${data[i].name}</p>
             <p>Classification: ${data[i].classification}</p>
             <p>Language: ${data[i].language}</p>
-            <a href="#">More</a>
+            <button class="moreBtn" id=${i}>More</button>
         </div>`;
       }
+
+        // Adding eventlisteners to every moreBtn
+        document.querySelectorAll('.moreBtn').forEach(button => {
+          button.addEventListener('click', () => {
+            //sends the data and the id of the button that is clicked.
+            showDetailInfoSpecies(data, button.id);
+          });
+        });
+
       break;
     case 'planets':
       for (let i = 0; i < data.length; i++) {
@@ -35,9 +53,18 @@ function renderData(data, option) {
             <p>Name: ${data[i].name}</p>
             <p>Climate: ${data[i].climate}</p>
             <p>Population: ${data[i].population}</p>
-           <a href="#">More</a>
+            <button class="moreBtn" id=${i}>More</button>
         </div>`;
       }
+
+        // Adding eventlisteners to every moreBtn
+        document.querySelectorAll('.moreBtn').forEach(button => {
+          button.addEventListener('click', () => {
+            //sends the data and the id of the button that is clicked.
+            showDetailInfoPlanets(data, button.id);
+          });
+        });
+
       break;
     case 'people':
       for (let i = 0; i < data.length; i++) {
@@ -46,9 +73,18 @@ function renderData(data, option) {
             <p>Name: ${data[i].name}</p>
             <p>Birth year: ${data[i].birth_year}</p>
             <p>Gender: ${data[i].gender}</p>
-            <a href="#">More</a>
+            <button class="moreBtn" id=${i}>More</button>
         </div>`;
       }
+
+        // Adding eventlisteners to every moreBtn
+        document.querySelectorAll('.moreBtn').forEach(button => {
+          button.addEventListener('click', () => {
+            //sends the data and the id of the button that is clicked.
+            showDetailInfoPeople(data, button.id);
+          });
+        });
+
       break;
       case 'vehicles':
         for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get     
@@ -58,11 +94,19 @@ function renderData(data, option) {
               <p>Name: ${data[i].name}</p>
               <p>Model: ${data[i].model}</p>
               <p>Manufacturer: ${data[i].manufacturer}</p>
-              <a href="#">More</a>
+              <button class="moreBtn" id="${i}">More</button>
            </div>
-          </div>`  //renders all the results           
+          </div>` //renders all the results    
         }
 
+        // Adding eventlisteners to every moreBtn
+        document.querySelectorAll('.moreBtn').forEach(button => {
+          button.addEventListener('click', () => {
+            //sends the data and the id of the button that is clicked.
+            showDetailInfoVehicles(data, button.id);
+          });
+        });
+        
         break;
         case 'films':
           for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
@@ -73,11 +117,20 @@ function renderData(data, option) {
                <div class="crawl">
                  <p><h1>EPISODE: ${data[i].episode_id}</h1></p>
                  <p><h3>TITLE: ${data[i].title}</h3<br><br></p><p> ${data[i].opening_crawl}</p>
-                 <a href="#">More</a>
+                 <button class="moreBtn" id=${i}>More</button>
                 </div>
               </div>
             </div> `  //renders all the results
           }
+  
+        // Adding eventlisteners to every moreBtn
+        document.querySelectorAll('.moreBtn').forEach(button => {
+          button.addEventListener('click', () => {
+            //sends the data and the id of the button that is clicked.
+            showDetailInfoFilms(data, button.id);
+          });
+        });
+
           break;
     default:
       renderResults.innerHTML += 

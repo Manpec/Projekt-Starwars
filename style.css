@@ -4,7 +4,7 @@
   color: yellow;
   margin: auto;
 }
-a{
+a {
   color: yellow;
 }
 
@@ -19,7 +19,6 @@ header {
 #searchHeader {
   display: flex;
   flex-direction: column;
-  
 }
 select {
   margin: 5px;
@@ -118,4 +117,31 @@ body {
   margin: 5px;
   padding: 20px;
 }
+#errorDiv h1 {
+  color: red;
+}
 
+#detailView > div {
+  display: flex;
+}
+
+#detailView button {
+  border: solid 3px yellow;
+  color: yellow;
+  padding: 10px;
+}
+
+#detailView button:hover {
+  color: black;
+  background-color: yellow;
+}
+
+#detailView span {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+#detailView li {
+  text-align: left;
+  padding: 20px;
+}
