@@ -16,7 +16,7 @@ function addCategoriesToSelection() {
       let arrayOfCategories = Object.keys(data); 
       for (i = 0; i < arrayOfCategories.length; i++) {
         let category = arrayOfCategories[i];
-        document.getElementById("select").innerHTML += `<option value="${category}">${category}</option>`;
+        document.getElementById('select').innerHTML += `<option value="${category}">${category}</option>`;
       }
     });
 }
@@ -24,8 +24,8 @@ function addCategoriesToSelection() {
 function starwarsSearch() {
   let loader = `<div class="boxLoading"></div>`;//loader gets html
   document.getElementById('loading').innerHTML = loader; //div id loading gets html
-  let select = document.getElementById("select").value; // Selects id select
-  let search = document.getElementById("search").value; // selects id search
+  let select = document.getElementById('select').value; // Selects id select
+  let search = document.getElementById('search').value; // selects id search
   
   fetch(`${api}${select}/?search=${search}`) //Puts in url + value from select and search
     .then((response) => { 
@@ -44,7 +44,7 @@ function starwarsSearch() {
   }
 
   function renderData (data, option){ //data = data.results to get the array of resultobjects
-   let renderResults = document.getElementById("result") //gets the div in where we are gonna render our search results
+   let renderResults = document.getElementById('result') //gets the div in where we are gonna render our search results
    renderResults.innerHTML=``//Resets the innerHTML to prevent previous searches to render on the website
 
     switch (option) { //a switch which gets the parameter option which is one of [people, starships, and so on]
