@@ -7,13 +7,13 @@
        case 'starships':
                  for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
                    renderResults.innerHTML += 
-                   `<div class='renderContent'><p>Name: ${data[i].name}</p><p>Model: ${data[i].model}</p><p>Manufacturer: ${data[i].manufacturer}</p></div>`  //renders all the results                                
+                   `<div class='renderContent'><p>Name: ${data[i].name}</p><p>Model: ${data[i].model}</p><p>Manufacturer: ${data[i].manufacturer}</p><a href="#">More</a></div>`  //renders all the results                                
                  }              
          break;
          case 'vehicles':
            for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get     
              renderResults.innerHTML += 
-             `<div class='renderContent'><div class="vehicles"><p>Name: ${data[i].name}</p><p>Model: ${data[i].model}</p><p>Manufacturer: ${data[i].manufacturer}</p></div></div>`  //renders all the results           
+             `<div class='renderContent'><div class="vehicles"><p>Name: ${data[i].name}</p><p>Model: ${data[i].model}</p><p>Manufacturer: ${data[i].manufacturer}</p><a href="#">More</a></div></div>`  //renders all the results           
            }
    
            break;
@@ -21,10 +21,14 @@
              for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
                
                renderResults.innerHTML += 
-               `<div class='renderContent'><div class="star-wars"><div class="crawl"><p><h1>EPISODE: ${data[i].episode_id}</h1></p><p><h3>TITLE: ${data[i].title}</h3<br><br></p><p> ${data[i].opening_crawl}</p></div></div></div>`  //renders all the results
+               `<div class='renderContent'><div class="star-wars"><div class="crawl"><p><h1>EPISODE: ${data[i].episode_id}</h1></p><p><h3>TITLE: ${data[i].title}</h3<br><br></p><p> ${data[i].opening_crawl}</p><a href="#">More</a></div></div></div>`  //renders all the results
              }
+             break;
+
+                
+                
              default:
- 
+
                break;
                
      }
