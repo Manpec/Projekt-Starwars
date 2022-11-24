@@ -19,7 +19,7 @@
  * Functions that will hide the result and show the detailview of the choosen category
  * Id is used to identify the selected index of the data array
  */
-async function showDetailInfoStarships(data, id) {
+function showDetailInfoStarships(data, id) {
     moreButtonPressed();
     document.getElementById('detailView').innerHTML += 
         `<span id="name">${data[id].name}</span>
@@ -72,7 +72,7 @@ async function showDetailInfoSpecies(data, id) {
 }
 
 
-async function showDetailInfoPlanets(data, id) {
+function showDetailInfoPlanets(data, id) {
     moreButtonPressed();
     document.getElementById('detailView').innerHTML += 
         `<span id="name">${data[id].name}</span>
@@ -124,7 +124,7 @@ async function showDetailInfoPeople(data, id) {
     document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
-function showDetailInfoVehicles(data, id) {
+showDetailInfoVehicles(data, id) {
     moreButtonPressed();
     document.getElementById('detailView').innerHTML += 
         `<span id="name">${data[id].name}</span>
@@ -150,7 +150,7 @@ function showDetailInfoVehicles(data, id) {
     document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
-async function showDetailInfoFilms(data, id) {
+function showDetailInfoFilms(data, id) {
     moreButtonPressed();
 
     document.getElementById('detailView').innerHTML += 
