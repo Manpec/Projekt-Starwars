@@ -124,7 +124,7 @@ async function showDetailInfoPeople(data, id) {
     document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
-showDetailInfoVehicles(data, id) {
+function showDetailInfoVehicles(data, id) {
     moreButtonPressed();
     document.getElementById('detailView').innerHTML += 
         `<span id="name">${data[id].name}</span>
