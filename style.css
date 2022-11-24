@@ -2,11 +2,24 @@
     text-align: center;
     background-color: black;
     color: yellow;
+    margin: auto;
 }
 
 header{
 padding: 60;
 
+
+}
+#header{
+  z-index: 1000;
+  position: relative;
+  display: flex;
+ 
+  
+}
+#searchHeader{
+  display: flex;
+  flex-direction: column;
 }
 input{
     border: solid 3px yellow;
@@ -16,6 +29,7 @@ select{
 }
 #searchBtn{
     border: solid 3px yellow;
+    color: yellow;
 }
 li{
     list-style: none;
@@ -86,3 +100,13 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+.vehicles{
+display: flex;
+border-bottom: 1px solid yellow;
+}
+.vehicles p{
+  text-align: right;
+  margin: 5px;
+  padding: 20px;
+
+}

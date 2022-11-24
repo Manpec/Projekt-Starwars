@@ -15,23 +15,27 @@
 
 
 <body>
-    <header><div id="header"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png" width="400px" alt="">
-    </div>  
-      <input type="search" id="search">
+    <header><div id="header"><div id="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png" width="400px" alt="">
+    </div> 
+    <div id="searchHeader">
+      <input type="search" id="search" placeholder="enter search">
     <select name="" id="select">
 
     </select>
     <button id="searchBtn" class="btn"  onclick="starwarsSearch()">Search</button>
+  </div> 
+  </div>
 </header>
     
 <main>
 
-<div id="loading">
+  <div id="loading">
   </div>
-<div id="result">
-
+<div id="result"></div>
+<div id="hej"></div>
 </main>
 
 <script src="fetch.js"></script>
+<script src="error.js"></script>
 </body>
 </html>
