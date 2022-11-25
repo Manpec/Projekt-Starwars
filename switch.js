@@ -10,7 +10,7 @@ function renderData(data, option) {
         //for loop based on the length of the search results we get
         renderResults.innerHTML += 
         `<div>
-            <ul class="d-flex flex-row">
+            <ul class="d-flex">
               <li>Name: ${data[i].name}</li>
               <li>Model: ${data[i].model}</li>
               <li>Manufacturer: ${data[i].manufacturer}</li>
@@ -30,7 +30,7 @@ function renderData(data, option) {
         for (let i = 0; i < data.length; i++) {
           renderResults.innerHTML += 
           `<div>
-              <ul class="d-flex flex-row">
+              <ul class="d-flex">
                 <li>Name: ${data[i].name}</li>
                 <li>Classification: ${data[i]. classification}</li>
                 <li>Language: ${data[i].language}</li>
@@ -51,7 +51,7 @@ function renderData(data, option) {
         for (let i = 0; i < data.length; i++) {
           renderResults.innerHTML +=
           `<div>
-              <ul class="d-flex flex-row">
+              <ul class="d-flex">
                 <li>Name: ${data[i].name}</li>
                 <li>Climate: ${data[i].climate}</li>
                 <li>Population: ${data[i].population}</li>
@@ -72,7 +72,7 @@ function renderData(data, option) {
         for (let i = 0; i < data.length; i++) {
           renderResults.innerHTML += 
           `<div>
-            <ul class="d-flex flex-row justify-content-evenly<">
+            <ul class="d-flex">
               <li><strong>Name:</strong> ${data[i].name}</li>
               <li>Birth year: ${data[i].birth_year}</li>
               <li>Gender: ${data[i].gender}</li>
@@ -94,7 +94,7 @@ function renderData(data, option) {
           //for loop based on the length of the search results we get
           renderResults.innerHTML += 
           `<div>
-            <ul class="d-flex flex-row">
+            <ul class="d-flex">
               <li>Name: ${data[i].name}</li>
               <li>Model: ${data[i].model}</li>
               <li>Manufacturer: ${data[i].manufacturer}</li>
@@ -115,7 +115,7 @@ function renderData(data, option) {
           for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
             renderResults.innerHTML += 
             `<div>
-            <ul class="d-flex flex-row">
+            <ul class="d-flex">
               <li>EPISODE:${data[i].episode_id}</li>
               <li>TITLE: ${data[i].title}</li>  
               <li><button class="moreBtn" id=${i}>More</button></li>
