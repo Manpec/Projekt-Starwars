@@ -208,7 +208,7 @@ function backToSearch() {
  * Fetches the correct attribute based on the response that is in the data object and returns it to
  * be shown for the user.
  */
-async function fetchAttributeInfo(url) {
+function fetchAttributeInfo(url) {
 
   const homeworld = fetch(url)
     .then((response) => {
