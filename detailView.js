@@ -13,15 +13,15 @@
  
  */
 
-
 /**
  * Functions that will hide the result and show the detailview of the choosen category
  * Id is used to identify the selected index of the data array
  */
 function showDetailInfoStarships(data, id) {
-    moreButtonPressed();
-    document.getElementById('detailView').innerHTML += 
-        `<span id="name">${data[id].name}</span>
+  moreButtonPressed();
+  document.getElementById(
+    "detailView"
+  ).innerHTML += `<span id="name">${data[id].name}</span>
         <div>
           <ul>
             <li><strong>Carco Capacity:</strong> ${data[id].cargo_capacity}</li>
@@ -39,19 +39,22 @@ function showDetailInfoStarships(data, id) {
             <li><strong>Manufacturer:</strong> ${data[id].manufacturer}</li>
           </ul>
         </div>
-        <button id="backBtn">Back to Search</button>`; 
+        <button id="backBtn">Back to Search</button>`;
 
-    document.getElementById('backBtn').addEventListener('click', backToSearch);
+  document.getElementById("backBtn").addEventListener("click", backToSearch);
 }
 
 async function showDetailInfoSpecies(data, id) {
-    moreButtonPressed();
-    document.getElementById('detailView').innerHTML += 
-        `<span id="name">${data[id].name}</span>
+  moreButtonPressed();
+  document.getElementById("detailView").innerHTML += `<span id="name">${
+    data[id].name
+  }</span>
         <div>
           <ul>
             <li><strong>Average Height:</strong> ${data[id].average_height}</li>
-            <li><strong>Average Lifespan:</strong> ${data[id].average_lifespan}</li>
+            <li><strong>Average Lifespan:</strong> ${
+              data[id].average_lifespan
+            }</li>
             <li><strong>Classification:</strong> ${data[id].classification}</li>
           </ul>
           <ul>
@@ -60,21 +63,23 @@ async function showDetailInfoSpecies(data, id) {
             <li><strong>Hair Colors:</strong> ${data[id].hair_colors}</li>
           </ul>
           <ul>
-            <li><strong>Homeworld:</strong> ${await fetchAttributeInfo(data[id].homeworld)}</li>
+            <li><strong>Homeworld:</strong> ${await fetchAttributeInfo(
+              data[id].homeworld
+            )}</li>
             <li><strong>Language:</strong> ${data[id].language}</li>
             <li><strong>Designation:</strong> ${data[id].designation}</li>
           </ul>
         </div>
-        <button id="backBtn">Back to Search</button>`; 
+        <button id="backBtn">Back to Search</button>`;
 
-    document.getElementById('backBtn').addEventListener('click', backToSearch);
+  document.getElementById("backBtn").addEventListener("click", backToSearch);
 }
 
-
 function showDetailInfoPlanets(data, id) {
-    moreButtonPressed();
-    document.getElementById('detailView').innerHTML += 
-        `<span id="name">${data[id].name}</span>
+  moreButtonPressed();
+  document.getElementById(
+    "detailView"
+  ).innerHTML += `<span id="name">${data[id].name}</span>
         <div>
           <ul>
             <li><strong>Climate:</strong> ${data[id].climate}</li>
@@ -92,15 +97,17 @@ function showDetailInfoPlanets(data, id) {
             <li><strong>Number of Films:</strong> ${data[id].films.length}</li>
           </ul>
         </div>
-        <button id="backBtn">Back to Search</button>`; 
+        <button id="backBtn">Back to Search</button>`;
 
-    document.getElementById('backBtn').addEventListener('click', backToSearch);
+  document.getElementById("backBtn").addEventListener("click", backToSearch);
 }
 
-async function showDetailInfoPeople(data, id) {    
-    moreButtonPressed();
-    document.getElementById('detailView').innerHTML += 
-        `<span id="name">${data[id].name}</span>
+async function showDetailInfoPeople(data, id) {
+  moreButtonPressed();
+  //const homeworld = await fetchAttributeInfo(data[id].homeworld)
+  document.getElementById("detailView").innerHTML += `<span id="name">${
+    data[id].name
+  }</span>
         <div>
           <ul>
             <li><strong>Birth Year:</strong> ${data[id].birth_year}</li>
@@ -115,18 +122,21 @@ async function showDetailInfoPeople(data, id) {
           <ul>
             <li><strong>Homeworld:</strong> ${await fetchAttributeInfo(data[id].homeworld)}</li>
             <li><strong>Number of Movies:</strong> ${data[id].films.length}</li>
-            <li><strong>Number of Vehicles:</strong> ${data[id].vehicles.length}</li>
+            <li><strong>Number of Vehicles:</strong> ${
+              data[id].vehicles.length
+            }</li>
           </ul>
         </div>
-        <button id="backBtn">Back to Search</button>`; 
+        <button id="backBtn">Back to Search</button>`;
 
-    document.getElementById('backBtn').addEventListener('click', backToSearch);
+  document.getElementById("backBtn").addEventListener("click", backToSearch);
 }
 
 function showDetailInfoVehicles(data, id) {
-    moreButtonPressed();
-    document.getElementById('detailView').innerHTML += 
-        `<span id="name">${data[id].name}</span>
+  moreButtonPressed();
+  document.getElementById(
+    "detailView"
+  ).innerHTML += `<span id="name">${data[id].name}</span>
         <div>
           <ul>
             <li><strong>Cargo Capacity:</strong> ${data[id].cargo_capacity}</li>
@@ -144,16 +154,15 @@ function showDetailInfoVehicles(data, id) {
             <li><strong>Number of Films:</strong> ${data[id].films.length}</li>
           </ul>
         </div>
-        <button id="backBtn">Back to Search</button>`; 
+        <button id="backBtn">Back to Search</button>`;
 
-    document.getElementById('backBtn').addEventListener('click', backToSearch);
+  document.getElementById("backBtn").addEventListener("click", backToSearch);
 }
 
 function showDetailInfoFilms(data, id) {
-    moreButtonPressed();
+  moreButtonPressed();
 
-    document.getElementById('detailView').innerHTML += 
-        `<div class="star-wars">
+  document.getElementById("detailView").innerHTML += `<div class="star-wars">
         <div class="crawl">
         <span id="name">${data[id].title}</span>
         <div>
@@ -171,31 +180,29 @@ function showDetailInfoFilms(data, id) {
         <button id="backBtn">Back to Search</button>
         </div>
         </div>
-        `; 
-        
-    document.getElementById('backBtn').addEventListener('click', backToSearch);
+        `;
+
+  document.getElementById("backBtn").addEventListener("click", backToSearch);
 }
 
 /**
  * Hides the search results and displays the detail view
  */
 function moreButtonPressed() {
-    let result = document.getElementById('result');
-    result.style.display = 'none';
-    document.getElementById('searchHeader').style.display = 'none';
-
+  let result = document.getElementById("result");
+  result.style.display = "none";
+  document.getElementById("searchHeader").style.display = "none";
 }
 
 /**
  * Hides the detailview and show the search page again
  */
-function backToSearch() {    
-    let detailView = document.getElementById('detailView'); 
-    //detailView.style.display = 'none';
-    document.getElementById('detailView').innerHTML = ``;
-    result.style.display = 'grid';
-    document.getElementById('searchHeader').style.display = 'flex';
-    
+function backToSearch() {
+  let detailView = document.getElementById("detailView");
+  //detailView.style.display = 'none';
+  document.getElementById("detailView").innerHTML = ``;
+  result.style.display = "grid";
+  document.getElementById("searchHeader").style.display = "flex";
 }
 
 /**
@@ -203,30 +210,16 @@ function backToSearch() {
  * be shown for the user.
  */
 async function fetchAttributeInfo(url) {
-    let fetchedData = '';
 
-    let response = await fetch(url);
-    if(response.ok) {
-        fetchedData = await response.json();
-
-    }
-
-/*    fetch(url)
-        .then((response) => {
-            if (response.ok) {
-            return response.json();
-            }
-        })
-        .then((data) => {
-            console.log(data.name)
-            fetchedData = data.name;
-        })
-        .catch(() => {
-            return '';
-        });*/
-
-      return fetchedData.name;
+  const homeworld = fetch(url)
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    })
+    .then((data) => data.name)
+    .catch(() => {
+      return "";
+    }); 
+return homeworld
 }
-
-
-
