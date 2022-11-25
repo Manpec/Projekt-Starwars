@@ -46,14 +46,8 @@ footer {
 }
 
 #result {
-  min-height: 200px;
-  margin: auto;
-  text-align: center;
-  width: 80%;
-  display: grid;
-  grid-template-columns: auto auto auto;
   margin-top: 20px;
-}
+} 
 
 .renderContent {
   background-color: lightgray;
