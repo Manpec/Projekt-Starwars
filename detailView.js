@@ -40,8 +40,11 @@ function showDetailInfoStarships(data, id) {
           </ul>
         </div>
         <button id="backBtn">Back to Search</button>`; 
+   
 
     document.getElementById('backBtn').addEventListener('click', backToSearch);
+    
+
 }
 
 async function showDetailInfoSpecies(data, id) {
@@ -119,6 +122,16 @@ async function showDetailInfoPeople(data, id) {
           </ul>
         </div>
         <button id="backBtn">Back to Search</button>`; 
+    console.log(id)
+        if(id == 0) {
+          document.getElementById('images').innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Luke_Skywalker.png" >`;
+      } else if(id == 1)
+      {
+        document.getElementById('images').innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/en/5/5c/C-3PO_droid.png">`;
+    } else if(id == 2)
+    {
+      document.getElementById('images').innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/en/3/39/R2-D2_Droid.png">`;
+  }
 
     document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
@@ -183,6 +196,7 @@ function moreButtonPressed() {
     let result = document.getElementById('result');
     result.style.display = 'none';
     //document.getElementById('searchHeader').style.display = 'none';  
+   
 
 }
 
@@ -193,6 +207,7 @@ function backToSearch() {
     let detailView = document.getElementById('detailView'); 
     //detailView.style.display = 'none';
     document.getElementById('detailView').innerHTML = ``; //Empty detailsView
+    document.getElementById('images').innerHTML = ``;
     result.style.display = 'grid'; // Go back to display grid
     document.getElementById('searchHeader').style.display = 'flex'; //SearchHeader flex
     
@@ -227,11 +242,9 @@ async function fetchAttributeInfo(url) {
 
       return fetchedData.name;
 }
-document.getElementById("searchBtn").addEventListener("click", starwarsSearchAgain);
-function starwarsSearchAgain() {
-  document.getElementById('detailView').innerHTML = ``; //Empty detailsView
-  let result = document.getElementById('result');
-  result.style.display = 'grid';
-  starwarsSearch();
-}
 
+function img() {
+
+
+}
+img();

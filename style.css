@@ -47,25 +47,40 @@ footer {
 
 #result {
   margin-top: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto;
 } 
 
-.renderContent {
+.content {
   background-color: lightgray;
   width: 90%;
   height: 95%;
   border: 1px solid gray;
   margin-bottom: 50px;
+  height: 100%;
+  width: 400px;
+  display: inline;
+  
 }
-.renderContent p {
+.content ul {
+  background-color: lightgray;
+  
+}
+.content li {
+  background-color: lightgray;
+  padding: 10px;
+  
+}
+.content li strong {
   background-color: lightgray;
 }
-.renderContent h1{
+.content h1{
   background-color: gray;
 }
-.renderContent h3{
+.content h3{
   background-color: lightgray;
 }
-.renderContent button{
+.content button{
   border-color: yellow;
   background-color: lightgray;
 }
