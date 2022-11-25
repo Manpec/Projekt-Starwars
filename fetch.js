@@ -1,6 +1,13 @@
-document.getElementById("searchBtn").addEventListener("click", starwarsSearch);
+// Button and "press enter" search functionality
+document.getElementById('searchBtn').addEventListener('click', starwarsSearch);
+document.getElementById('search').addEventListener('keyup', (event) => {
+  if (event.code === 'Enter') {
+    starwarsSearch();
+  }
+});
 
 function starwarsSearch() {
+
   let loader = document.getElementById('loading')
   loader.innerHTML =`<div class="boxLoading"></div>` //div id loading gets html
   let select = document.getElementById('select').value;
@@ -24,5 +31,5 @@ function starwarsSearch() {
     loader.innerHTML = ``; //removes html from id loading when call is done
   });
   search.value = ''; // Clears input field after searching
-}
 
+}
