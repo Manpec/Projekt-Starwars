@@ -182,7 +182,7 @@ function showDetailInfoFilms(data, id) {
 function moreButtonPressed() {
     let result = document.getElementById('result');
     result.style.display = 'none';
-    document.getElementById('searchHeader').style.display = 'none';
+    //document.getElementById('searchHeader').style.display = 'none';  
 
 }
 
@@ -192,9 +192,9 @@ function moreButtonPressed() {
 function backToSearch() {    
     let detailView = document.getElementById('detailView'); 
     //detailView.style.display = 'none';
-    document.getElementById('detailView').innerHTML = ``;
-    result.style.display = 'grid';
-    document.getElementById('searchHeader').style.display = 'flex';
+    document.getElementById('detailView').innerHTML = ``; //Empty detailsView
+    result.style.display = 'grid'; // Go back to display grid
+    document.getElementById('searchHeader').style.display = 'flex'; //SearchHeader flex
     
 }
 
@@ -227,6 +227,11 @@ async function fetchAttributeInfo(url) {
 
       return fetchedData.name;
 }
-
-
+document.getElementById("searchBtn").addEventListener("click", starwarsSearchAgain);
+function starwarsSearchAgain() {
+  document.getElementById('detailView').innerHTML = ``; //Empty detailsView
+  let result = document.getElementById('result');
+  result.style.display = 'grid';
+  starwarsSearch();
+}
 

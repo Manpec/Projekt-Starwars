@@ -1,5 +1,6 @@
 document.getElementById("searchBtn").addEventListener("click", starwarsSearch);
 
+
 function starwarsSearch() {
   let loader = `<div class="boxLoading"></div>`;//loader gets html
   document.getElementById('loading').innerHTML = loader; //div id loading gets html
