@@ -9,14 +9,15 @@ function renderData(data, option) {
       for (let i = 0; i < data.length; i++) {
         //for loop based on the length of the search results we get
         renderResults.innerHTML += 
-        `<div class='renderContent'>
-            <p>Name: ${data[i].name}</p>
-            <p>Model: ${data[i].model}</p>
-            <p>Manufacturer: ${data[i].manufacturer}</p>
-            <button class="moreBtn" id=${i}>More</button>
-        </div>`;
+        `<div>
+            <ul class="d-flex flex-row justify-content-evenly">
+              <li>Name: ${data[i].name}</li>
+              <li>Model: ${data[i].model}</li>
+              <li>Manufacturer: ${data[i].manufacturer}</li>
+              <li><button class="moreBtn" id=${i}>More</button></li>
+              </ul>
+          </div>`; //renders all the results
       }
-
         // Adding eventlisteners to every moreBtn
         document.querySelectorAll('.moreBtn').forEach(button => {
           button.addEventListener('click', () => {
@@ -24,19 +25,19 @@ function renderData(data, option) {
             showDetailInfoStarships(data, button.id);
           });
         });
-      
       break;
-    case 'species':
-      for (let i = 0; i < data.length; i++) {
-        renderResults.innerHTML += 
-        `<div class='renderContent'>
-            <p>Name: ${data[i].name}</p>
-            <p>Classification: ${data[i].classification}</p>
-            <p>Language: ${data[i].language}</p>
-            <button class="moreBtn" id=${i}>More</button>
-        </div>`;
-      }
-
+      case 'species':
+        for (let i = 0; i < data.length; i++) {
+          renderResults.innerHTML += 
+          `<div>
+              <ul class="d-flex flex-row justify-content-evenly">
+                <li>Name: ${data[i].name}</li>
+                <li>Classification: ${data[i]. classification}</li>
+                <li>Language: ${data[i].language}</li>
+                <li><button class="moreBtn" id=${i}>More</button></li>
+                </ul>
+            </div>`;
+        }
         // Adding eventlisteners to every moreBtn
         document.querySelectorAll('.moreBtn').forEach(button => {
           button.addEventListener('click', () => {
@@ -44,19 +45,20 @@ function renderData(data, option) {
             showDetailInfoSpecies(data, button.id);
           });
         });
-
       break;
-    case 'planets':
-      for (let i = 0; i < data.length; i++) {
-        renderResults.innerHTML += 
-        `<div class='renderContent'>
-            <p>Name: ${data[i].name}</p>
-            <p>Climate: ${data[i].climate}</p>
-            <p>Population: ${data[i].population}</p>
-            <button class="moreBtn" id=${i}>More</button>
-        </div>`;
-      }
 
+      case 'planets':
+        for (let i = 0; i < data.length; i++) {
+          renderResults.innerHTML +=
+          `<div>
+              <ul class="d-flex flex-row justify-content-evenly">
+                <li>Name: ${data[i].name}</li>
+                <li>Climate: ${data[i].climate}</li>
+                <li>Population: ${data[i].population}</li>
+                <li><button class="moreBtn" id=${i}>More</button></li>
+                </ul>
+            </div>`;
+        }
         // Adding eventlisteners to every moreBtn
         document.querySelectorAll('.moreBtn').forEach(button => {
           button.addEventListener('click', () => {
@@ -64,19 +66,20 @@ function renderData(data, option) {
             showDetailInfoPlanets(data, button.id);
           });
         });
-
       break;
-    case 'people':
-      for (let i = 0; i < data.length; i++) {
-        renderResults.innerHTML += 
-        `<div class='renderContent'>
-            <p>Name: ${data[i].name}</p>
-            <p>Birth year: ${data[i].birth_year}</p>
-            <p>Gender: ${data[i].gender}</p>
-            <button class="moreBtn" id=${i}>More</button>
-        </div>`;
-      }
 
+      case 'people':
+        for (let i = 0; i < data.length; i++) {
+          renderResults.innerHTML += 
+          `<div>
+            <ul class="d-flex flex-row justify-content-evenly<">
+              <li><strong>Name:</strong> ${data[i].name}</li>
+              <li>Birth year: ${data[i].birth_year}</li>
+              <li>Gender: ${data[i].gender}</li>
+              <li><button class="moreBtn" id=${i}>More</button></li>
+            </ul>
+            </div>`;
+        }
         // Adding eventlisteners to every moreBtn
         document.querySelectorAll('.moreBtn').forEach(button => {
           button.addEventListener('click', () => {
@@ -84,21 +87,21 @@ function renderData(data, option) {
             showDetailInfoPeople(data, button.id);
           });
         });
-
       break;
-      case 'vehicles':
-        for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get     
-          renderResults.innerHTML += 
-          `<div class='renderContent'>
-            
-              <p>Name: ${data[i].name}</p>
-              <p>Model: ${data[i].model}</p>
-              <p>Manufacturer: ${data[i].manufacturer}</p>
-              <button class="moreBtn" id="${i}">More</button>
-          
-          </div>` //renders all the results    
-        }
 
+      case 'vehicles':
+        for (let i = 0; i < data.length; i++) {
+          //for loop based on the length of the search results we get
+          renderResults.innerHTML += 
+          `<div>
+            <ul class="d-flex flex-row justify-content-evenly">
+              <li>Name: ${data[i].name}</li>
+              <li>Model: ${data[i].model}</li>
+              <li>Manufacturer: ${data[i].manufacturer}</li>
+              <li><button class="moreBtn" id=${i}>More</button></li>
+              </ul>
+          </div>`; //renders all the results
+        }
         // Adding eventlisteners to every moreBtn
         document.querySelectorAll('.moreBtn').forEach(button => {
           button.addEventListener('click', () => {
@@ -106,19 +109,19 @@ function renderData(data, option) {
             showDetailInfoVehicles(data, button.id);
           });
         });
-        
         break;
+
         case 'films':
           for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
-            
             renderResults.innerHTML += 
-            `<div class='renderContent'>
-                 <h1>EPISODE: ${data[i].episode_id}</h1>
-                 <p><h3>TITLE: ${data[i].title}</h3<br><br></p><p> ${data[i].opening_crawl}</p>
-                 <button class="moreBtn" id=${i}>More</button>
-            </div> `  //renders all the results
-          }
-  
+            `<div>
+            <ul class="d-flex flex-row justify-content-evenly">
+              <li>EPISODE:${data[i].episode_id}</li>
+              <li>TITLE: ${data[i].title}</li>  
+              <li><button class="moreBtn" id=${i}>More</button></li>
+              </ul>
+          </div>`;
+          } // <br><br></p><p> ${data[i].opening_crawl}</p>
         // Adding eventlisteners to every moreBtn
         document.querySelectorAll('.moreBtn').forEach(button => {
           button.addEventListener('click', () => {
@@ -126,8 +129,8 @@ function renderData(data, option) {
             showDetailInfoFilms(data, button.id);
           });
         });
-
           break;
+
     default:
       renderResults.innerHTML += 
       `<div class='renderContent'>
