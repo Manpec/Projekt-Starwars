@@ -5,65 +5,29 @@ function renderData(data, option) {
   ) {
     case 'starships':
       printStarshipToResultTag(data);
-        // Adding eventlisteners to every moreBtn
-        document.querySelectorAll('.moreBtn').forEach(button => {
-          button.addEventListener('click', () => {
-            //sends the data and the id of the button that is clicked.
-            showDetailInfoStarships(data, button.id);
-          });
-        });
+      generateMoreBtn(showDetailInfoStarships, data);
       break;
       case 'species':
         printSpeciesToResultTag(data);
-        // Adding eventlisteners to every moreBtn
-        document.querySelectorAll('.moreBtn').forEach(button => {
-          button.addEventListener('click', () => {
-            //sends the data and the id of the button that is clicked.
-            showDetailInfoSpecies(data, button.id);
-          });
-        });
+        generateMoreBtn(showDetailInfoSpecies, data);
       break;
 
       case 'planets':
         printPlanetsToResultTag(data);
-        // Adding eventlisteners to every moreBtn
-        document.querySelectorAll('.moreBtn').forEach(button => {
-          button.addEventListener('click', () => {
-            //sends the data and the id of the button that is clicked.
-            showDetailInfoPlanets(data, button.id);
-          });
-        });
+        generateMoreBtn(showDetailInfoPlanets, data);
       break;
 
       case 'people':
         printPeopleToResultTag(data);
-        // Adding eventlisteners to every moreBtn
-        document.querySelectorAll('.moreBtn').forEach(button => {
-          button.addEventListener('click', () => {
-            //sends the data and the id of the button that is clicked.
-            showDetailInfoPeople(data, button.id);
-          });
-        });
+        generateMoreBtn(showDetailInfoPeople, data);
       break;
       case 'vehicles':
         printVehiclesToResultTag(data);
-        // Adding eventlisteners to every moreBtn
-        document.querySelectorAll('.moreBtn').forEach(button => {
-          button.addEventListener('click', () => {
-            //sends the data and the id of the button that is clicked.
-            showDetailInfoVehicles(data, button.id);
-          });
-        });
+        generateMoreBtn(showDetailInfoVehicles, data);
         break;
         case 'films':
           printFilmsToResultTag(data);
-        // Adding eventlisteners to every moreBtn
-        document.querySelectorAll('.moreBtn').forEach(button => {
-          button.addEventListener('click', () => {
-            //sends the data and the id of the button that is clicked.
-            showDetailInfoFilms(data, button.id);
-          });
-        });
+          generateMoreBtn(showDetailInfoFilms, data);
           break;
     default:
       printErrorToResultTag();
@@ -160,4 +124,20 @@ function printErrorToResultTag(){
   `<div class='renderContent'>
     <p>Couldn't find what you're looking for. Please try again!</p>
   </div>`;
+}
+
+/**
+ * Generates the click-eventlistener for all the available more buttons for the search result
+ * And calls the correct function based on the parameter from the switch case. 
+ */
+function generateMoreBtn(func, data) {
+
+          // Adding eventlisteners to every moreBtn
+          document.querySelectorAll('.moreBtn').forEach(button => {
+          button.addEventListener('click', () => {
+            //sends the data and the id of the button that is clicked.  
+            func(data, button.id);
+          });
+        });
+
 }
