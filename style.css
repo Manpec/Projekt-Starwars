@@ -10,6 +10,7 @@ a {
 
 header {
   padding: 60;
+  border-bottom: 1px solid yellow;
 }
 #header {
   z-index: 1000;
@@ -47,8 +48,32 @@ footer {
 #result {
   min-height: 200px;
   margin: auto;
+  text-align: center;
   width: 80%;
-  border: 1px solid yellow;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 20px;
+}
+
+.renderContent {
+  background-color: lightgray;
+  width: 90%;
+  height: 95%;
+  border: 1px solid gray;
+  margin-bottom: 50px;
+}
+.renderContent p {
+  background-color: lightgray;
+}
+.renderContent h1{
+  background-color: gray;
+}
+.renderContent h3{
+  background-color: lightgray;
+}
+.renderContent button{
+  border-color: yellow;
+  background-color: lightgray;
 }
 
 body {
@@ -61,7 +86,7 @@ body {
   height: 800px;
   perspective: 400px;
   font-family: "Pathway Gothic One", sans-serif;
-  font-size: 100%;
+  font-size: 200%;
   font-weight: 600;
   letter-spacing: 6px;
 
@@ -108,15 +133,8 @@ body {
     transform: rotate(360deg);
   }
 }
-.vehicles {
-  display: flex;
-  border-bottom: 1px solid yellow;
-}
-.vehicles p {
-  text-align: right;
-  margin: 5px;
-  padding: 20px;
-}
+
+
 #errorDiv h1 {
   color: red;
 }
@@ -124,7 +142,10 @@ body {
 #detailView > div {
   display: flex;
 }
+#detailView {
+  width: 500px;
 
+}
 #detailView button {
   border: solid 3px yellow;
   color: yellow;

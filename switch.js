@@ -90,12 +90,12 @@ function renderData(data, option) {
         for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get     
           renderResults.innerHTML += 
           `<div class='renderContent'>
-            <div class="vehicles">
+            
               <p>Name: ${data[i].name}</p>
               <p>Model: ${data[i].model}</p>
               <p>Manufacturer: ${data[i].manufacturer}</p>
               <button class="moreBtn" id="${i}">More</button>
-           </div>
+          
           </div>` //renders all the results    
         }
 
@@ -113,13 +113,9 @@ function renderData(data, option) {
             
             renderResults.innerHTML += 
             `<div class='renderContent'>
-              <div class="star-wars">
-               <div class="crawl">
-                 <p><h1>EPISODE: ${data[i].episode_id}</h1></p>
+                 <h1>EPISODE: ${data[i].episode_id}</h1>
                  <p><h3>TITLE: ${data[i].title}</h3<br><br></p><p> ${data[i].opening_crawl}</p>
                  <button class="moreBtn" id=${i}>More</button>
-                </div>
-              </div>
             </div> `  //renders all the results
           }
   

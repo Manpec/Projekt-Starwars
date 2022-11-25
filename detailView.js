@@ -7,11 +7,10 @@
  * 
  *      
  *      Styling saker
- *      - När man försöker trycka på more för filmerna blir det lite jobbigt med animationen, kanske att vi gör more knappen fast eller har animationen när man trycker på detaljvyn 
- * 
+ *     
  *      - När searchrutan försvinner i detaljvyn flyttar sig loggan
  * 
- *      - När sökrutan visas igen lägger elementen sig vågrätt istället för lodrätt
+ 
  */
 
 
@@ -154,7 +153,9 @@ function showDetailInfoFilms(data, id) {
     moreButtonPressed();
 
     document.getElementById('detailView').innerHTML += 
-        `<span id="name">${data[id].title}</span>
+        `<div class="star-wars">
+        <div class="crawl">
+        <span id="name">${data[id].title}</span>
         <div>
           <ul>
             <li><strong>Director:</strong> ${data[id].director}</li>
@@ -167,8 +168,11 @@ function showDetailInfoFilms(data, id) {
             <li><strong>Opening Crawl:</strong> ${data[id].opening_crawl}</li>
           </ul>
         </div>
-        <button id="backBtn">Back to Search</button>`; 
-
+        <button id="backBtn">Back to Search</button>
+        </div>
+        </div>
+        `; 
+        
     document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
@@ -179,6 +183,7 @@ function moreButtonPressed() {
     let result = document.getElementById('result');
     result.style.display = 'none';
     document.getElementById('searchHeader').style.display = 'none';
+
 }
 
 /**
@@ -186,9 +191,11 @@ function moreButtonPressed() {
  */
 function backToSearch() {    
     let detailView = document.getElementById('detailView'); 
-    detailView.style.display = 'none';
-    result.style.display = 'block';
-    document.getElementById('searchHeader').style.display = 'block';
+    //detailView.style.display = 'none';
+    document.getElementById('detailView').innerHTML = ``;
+    result.style.display = 'grid';
+    document.getElementById('searchHeader').style.display = 'flex';
+    
 }
 
 /**
