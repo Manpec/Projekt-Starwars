@@ -6,6 +6,7 @@ function renderData(data, option) {
     case 'starships':
       printStarshipToResultTag(data);
       generateMoreBtn(showDetailInfoStarships, data);
+     
       break;
       case 'species':
         printSpeciesToResultTag(data);
@@ -48,6 +49,7 @@ function printStarshipToResultTag(data){
           </ul>
       </div>`; 
   } 
+
 }
 
 function printSpeciesToResultTag(data){

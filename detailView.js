@@ -22,8 +22,8 @@
 function showDetailInfoStarships(data, id) {
   moreButtonPressed();
 
-  newObj = data.map((item, i)=>({...item, image: starshipsImages[i]}));
-  console.log(newObj);
+  //newObj = data.map((item, i)=>({...item, image: starshipsImages[i]}));
+  //console.log(newObj);
 
   document.getElementById(
     "detailView"
@@ -47,7 +47,7 @@ function showDetailInfoStarships(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-        document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
+       // document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
   document.getElementById("backBtn").addEventListener("click", backToSearch);
 }
@@ -55,8 +55,8 @@ function showDetailInfoStarships(data, id) {
 async function showDetailInfoSpecies(data, id) {
   moreButtonPressed();
 
-  newObj = data.map((item, i)=>({...item, image: speciesImages[i]}));
-  console.log(newObj);
+ // newObj = data.map((item, i)=>({...item, image: speciesImages[i]}));
+ // console.log(newObj);
 
   document.getElementById("detailView").innerHTML += `<span id="name">${
     data[id].name
@@ -84,7 +84,7 @@ async function showDetailInfoSpecies(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-        document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
+       // document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
   document.getElementById("backBtn").addEventListener("click", backToSearch);
 }
@@ -92,8 +92,8 @@ async function showDetailInfoSpecies(data, id) {
 function showDetailInfoPlanets(data, id) {
   moreButtonPressed();
 
-  newObj = data.map((item, i)=>({...item, image: planetsImages[i]}));
-console.log(newObj);
+  //newObj = data.map((item, i)=>({...item, image: planetsImages[i]}));
+//console.log(newObj);
 
   document.getElementById(
     "detailView"
@@ -117,7 +117,7 @@ console.log(newObj);
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-        document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
+       // document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
   document.getElementById("backBtn").addEventListener("click", backToSearch);
 }

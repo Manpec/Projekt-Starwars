@@ -33,3 +33,16 @@ var peopleImages = [
   "https://i.pinimg.com/originals/33/81/e5/3381e50f4b54339203c97b28c08ccbb8.jpg",
   "https://upload.wikimedia.org/wikipedia/en/3/32/Ben_Kenobi.png"
 ];
+
+var planetImages = [
+
+];
+
+var starshipImages = [
+
+];
+
+var speciesImages = [
+
+];
+

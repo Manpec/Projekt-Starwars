@@ -33,4 +33,3 @@ function starwarsSearch() {
       document.getElementById('mainTitle').innerHTML = ``;//removes html from id loading when call is done
     });
 }
-
