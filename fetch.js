@@ -1,30 +1,19 @@
-
-
-// Button and "press enter" search functionality
-document.getElementById('searchBtn').addEventListener('click', starwarsSearch);
-document.getElementById('search').addEventListener('keyup', (event) => {
-  if (event.code === 'Enter') {
-    starwarsSearch();
-  }
-});
-
+document.getElementById("searchBtn").addEventListener("click", starwarsSearch);
 
 
 function starwarsSearch() {
-  document.getElementById('mainTitle').innerHTML = ``;
-  let loader = `<div class="boxLoading"></div>`; //loader gets html
+  let loader = `<div class="boxLoading"></div>`;//loader gets html
   document.getElementById('loading').innerHTML = loader; //div id loading gets html
   let select = document.getElementById('select').value;
-  let search = document.getElementById('search')
+  console.log(select);
+  let search = document.getElementById('search').value;
+  console.log(search);
   let result = document.getElementById('result');
   let input = document.getElementById('search');
   input.value = ''; // Clears input field after searching
-  url = ("https://swapi.dev/api/")
-  fetch(`${url}${select}/?search=${search}`)
+  fetch(`https://swapi.dev/api/${select}/?search=${search}`)
     .then((response) => {
       if (response.ok) {
-        console.log(response)
-        
         return response.json();
       }
     })
@@ -36,10 +25,8 @@ function starwarsSearch() {
         console.log('data', data.results);
         renderData(data.results, select); //data.results = an array of objectresults, select = the option we chose-> people, vehicles, starships, planets, movies
       }
-      document.getElementById('loading').innerHTML = ``; //removes html from id loading when call is done
+      document.getElementById('loading').innerHTML = ``;//removes html from id loading when call is done
+      document.getElementById('mainTitle').innerHTML = ``;//removes html from id loading when call is done
     });
 }
-
-
-
 
