@@ -1,7 +1,6 @@
 /**
  *      Buggar
  * 
- *      - Fixa min fetch så jag använder promises och inte async await (fattar fortfarande inte promises så gjorde såhär sålänge bara för att få det att funka hahaha så jag kunde göra allt annat)
  * 
  *      - När man trycker på more knappen, sen back to search knappen och sen more knappen igen försvinner allting
  * 
@@ -257,15 +256,15 @@ function backToSearch() {
  * Fetches the correct attribute based on the response that is in the data object and returns it to
  * be shown for the user.
  */
-async function fetchAttributeInfo(url) {
+function fetchAttributeInfo(url) {
 
   const homeworld = fetch(url)
     .then((response) => {
       if (response.ok) {
         return response.json();
-      }
+      }      
     })
-    .then((data) => data.name)
+    .then((data)=> data.name)
     .catch(() => {
       return "";
     }); 

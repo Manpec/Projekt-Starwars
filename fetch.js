@@ -15,9 +15,7 @@ function starwarsSearch() {
   let loader = `<div class="boxLoading"></div>`; //loader gets html
   document.getElementById('loading').innerHTML = loader; //div id loading gets html
   let select = document.getElementById('select').value;
-  console.log(select);
-  let search = document.getElementById('search').value;
-  console.log(search);
+  let search = document.getElementById('search')
   let result = document.getElementById('result');
   let input = document.getElementById('search');
   input.value = ''; // Clears input field after searching
