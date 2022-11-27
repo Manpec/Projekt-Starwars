@@ -1,5 +1,9 @@
 document.getElementById("searchBtn").addEventListener("click", starwarsSearch);
-
+document.getElementById('search').addEventListener('keyup', (event) => {
+  if (event.code === 'Enter') {
+    starwarsSearch();
+  }
+});
 
 function starwarsSearch() {
   let loader = `<div class="boxLoading"></div>`;//loader gets html
