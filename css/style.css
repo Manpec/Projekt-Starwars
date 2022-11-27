@@ -1,8 +1,16 @@
 * {
   text-align: center;
-  background-color: black;
+
   color: yellow;
   margin: auto;
+
+}
+body{
+  background-color: black;
+  background-image: url("wallpaperflare.com_wallpaper.jpg")  !important;  
+  background-repeat: no-repeat;
+  background-size: 1300px;
+  /*background-size: cover ;*/
 }
 a {
   color: yellow;
@@ -10,8 +18,9 @@ a {
 
 header {
   padding: 60;
-  border-bottom: 1px solid yellow;
+
   margin-bottom: 10px;
+
 }
 #header {
   z-index: 1000;
@@ -31,13 +40,16 @@ button {
 input {
   border: solid 3px yellow;
   margin: 5px;
+  background-color: black;
 }
 select {
   border: solid 3px yellow;
+  background-color: black;
 }
 #searchBtn {
   border: solid 3px yellow;
   color: yellow;
+  background-color: black;
 }
 li {
   list-style: none;
@@ -50,24 +62,24 @@ footer {
   margin-top: 20px;
   display: grid;
   grid-template-columns: auto auto auto;
- 
+ width: 80%;
 } 
 
 .infoCards {
   background-color: rgb(64, 42, 53);
-  width: 90%;
-  height: 95%;
+  width: 95%;
+  height: 300px;
   border: 1px solid gray;
-  margin-bottom: 50px;
+
   height: 100%;
-  width: 400px;
+ 
   display: inline;
   
   
 }
 .infoCards ul {
   background-color: rgb(64, 42, 53);
-
+  padding-inline-start: 0px !important;
 }
 .infoCards li {
   background-color: rgb(64, 42, 53);
@@ -89,15 +101,15 @@ footer {
   background-color: black;
 }
 
-body {
-  background: #000;
-}
+
 
 #detailView > div {
   display: flex;
+  
 }
 #detailView {
   width: 500px;
+ 
 
 }
 #detailView button {
@@ -119,8 +131,10 @@ body {
 #detailView li {
   text-align: left;
   padding: 20px;
+  
 }
 .flexContainer {
   display: flex;
+  
 }
 
