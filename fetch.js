@@ -1,3 +1,5 @@
+
+
 // Button and "press enter" search functionality
 document.getElementById('searchBtn').addEventListener('click', starwarsSearch);
 document.getElementById('search').addEventListener('keyup', (event) => {
@@ -7,7 +9,9 @@ document.getElementById('search').addEventListener('keyup', (event) => {
 });
 
 
+
 function starwarsSearch() {
+  document.getElementById('mainTitle').innerHTML = ``;
   let loader = `<div class="boxLoading"></div>`; //loader gets html
   document.getElementById('loading').innerHTML = loader; //div id loading gets html
   let select = document.getElementById('select').value;
@@ -17,9 +21,12 @@ function starwarsSearch() {
   let result = document.getElementById('result');
   let input = document.getElementById('search');
   input.value = ''; // Clears input field after searching
-  fetch(`https://swapi.dev/api/${select}/?search=${search}`)
+  url = ("https://swapi.dev/api/")
+  fetch(`${url}${select}/?search=${search}`)
     .then((response) => {
       if (response.ok) {
+        console.log(response)
+        
         return response.json();
       }
     })
@@ -34,3 +41,7 @@ function starwarsSearch() {
       document.getElementById('loading').innerHTML = ``; //removes html from id loading when call is done
     });
 }
+
+
+
+

@@ -39,7 +39,7 @@ function renderData(data, option) {
 function printStarshipToResultTag(data){
   for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
         document.getElementById('result').innerHTML += 
-    `<div>
+    `<div class ="infoCards">
         <ul">
           <li>Name: ${data[i].name}</li>
           <li>Model: ${data[i].model}</li>
@@ -53,7 +53,7 @@ function printStarshipToResultTag(data){
 function printSpeciesToResultTag(data){
   for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
     document.getElementById('result').innerHTML += 
-    `<div>
+    `<div class ="infoCards">
         <ul>
           <li>Name: ${data[i].name}</li>
           <li>Classification: ${data[i]. classification}</li>
@@ -67,7 +67,7 @@ function printSpeciesToResultTag(data){
 function printPlanetsToResultTag(data){
   for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
     document.getElementById('result').innerHTML += 
-    `<div>
+    `<div class ="infoCards">
         <ul>
           <li>Name: ${data[i].name}</li>
           <li>Climate: ${data[i].climate}</li>
@@ -81,7 +81,7 @@ function printPlanetsToResultTag(data){
 function printPeopleToResultTag(data){
   for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
     document.getElementById('result').innerHTML += 
-    `<div>
+    `<div class ="infoCards">
       <ul>
         <li><strong>Name:</strong> ${data[i].name}</li>
         <li>Birth year: ${data[i].birth_year}</li>
@@ -95,7 +95,7 @@ function printPeopleToResultTag(data){
 function printVehiclesToResultTag(data){
   for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
     document.getElementById('result').innerHTML += 
-    `<div>
+    `<div class ="infoCards">
       <ul>
         <li>Name: ${data[i].name}</li>
         <li>Model: ${data[i].model}</li>
@@ -107,9 +107,10 @@ function printVehiclesToResultTag(data){
 }
 
 function printFilmsToResultTag(data){
+  
   for (let i = 0; i < data.length; i++) { //for loop based on the length of the search results we get
     document.getElementById('result').innerHTML += 
-    `<div>
+    `<div class ="infoCards">
     <ul>
       <li>EPISODE:${data[i].episode_id}</li>
       <li>TITLE: ${data[i].title}</li>  
