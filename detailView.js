@@ -173,8 +173,6 @@ console.log(newObj);
             <li><strong>Director:</strong> ${data[id].director}</li>
             <li><strong>Film Number:</strong> ${data[id].episode_id}</li>
             <li><strong>Producer:</strong> ${data[id].producer}</li>
-          </ul>
-          <ul>
             <li><strong>Release Date:</strong> ${data[id].release_date}</li>
             <li><strong>Number of Characters:</strong> ${data[id].characters.length}</li>
             <li><strong>Opening Crawl:</strong> ${data[id].opening_crawl}</li>

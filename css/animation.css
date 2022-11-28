@@ -115,10 +115,10 @@
 
 .byline {
   color: #fff;
-  font-family: 'ITC Serif Gothic', Lato;
+  /* font-family: 'ITC Serif Gothic', Lato; */
   font-size: 1.2em;
   left: -2em;
-  letter-spacing: 0.53em;
+  letter-spacing: 0.5em;
   right: -2em;
   text-align: center;
   text-transform: uppercase;
