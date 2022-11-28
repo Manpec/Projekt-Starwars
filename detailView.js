@@ -17,8 +17,6 @@
  * Id is used to identify the selected index of the data array
  */
 
-
-
 function showDetailInfoStarships(data, id) {
   moreButtonPressed();
 
@@ -26,7 +24,7 @@ function showDetailInfoStarships(data, id) {
   //console.log(newObj);
 
   document.getElementById(
-    "detailView"
+    'detailView'
   ).innerHTML += `<span id="name">${data[id].name}</span>
         <div class="allInfo">
           <ul>
@@ -47,18 +45,18 @@ function showDetailInfoStarships(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-       // document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
+  // document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
-  document.getElementById("backBtn").addEventListener("click", backToSearch);
+  document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
 async function showDetailInfoSpecies(data, id) {
   moreButtonPressed();
 
- // newObj = data.map((item, i)=>({...item, image: speciesImages[i]}));
- // console.log(newObj);
+  // newObj = data.map((item, i)=>({...item, image: speciesImages[i]}));
+  // console.log(newObj);
 
-  document.getElementById("detailView").innerHTML += `<span id="name">${
+  document.getElementById('detailView').innerHTML += `<span id="name">${
     data[id].name
   }</span>
         <div>
@@ -84,19 +82,19 @@ async function showDetailInfoSpecies(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-       // document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
+  // document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
-  document.getElementById("backBtn").addEventListener("click", backToSearch);
+  document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
 function showDetailInfoPlanets(data, id) {
   moreButtonPressed();
 
   //newObj = data.map((item, i)=>({...item, image: planetsImages[i]}));
-//console.log(newObj);
+  //console.log(newObj);
 
   document.getElementById(
-    "detailView"
+    'detailView'
   ).innerHTML += `<span id="name">${data[id].name}</span>
         <div>
           <ul>
@@ -117,20 +115,19 @@ function showDetailInfoPlanets(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-       // document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
+  // document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
-  document.getElementById("backBtn").addEventListener("click", backToSearch);
+  document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
 async function showDetailInfoPeople(data, id) {
-  
   moreButtonPressed();
 
-  newObj = data.map((item, i)=>({...item, image: peopleImages[i]}));
-console.log(newObj);
+  newObj = data.map((item, i) => ({ ...item, image: peopleImages[i] }));
+  console.log(newObj);
 
   //const homeworld = await fetchAttributeInfo(data[id].homeworld)
-  document.getElementById("detailView").innerHTML += `<span id="name">${
+  document.getElementById('detailView').innerHTML += `<span id="name">${
     data[id].name
   }</span>
         <div>
@@ -145,7 +142,9 @@ console.log(newObj);
             <li><strong>Skin Color:</strong> ${data[id].skin_color}</li>
           </ul>
           <ul>
-            <li><strong>Homeworld:</strong> ${await fetchAttributeInfo(data[id].homeworld)}</li>
+            <li><strong>Homeworld:</strong> ${await fetchAttributeInfo(
+              data[id].homeworld
+            )}</li>
             <li><strong>Number of Movies:</strong> ${data[id].films.length}</li>
             <li><strong>Number of Vehicles:</strong> ${
               data[id].vehicles.length
@@ -153,19 +152,20 @@ console.log(newObj);
           </ul>
         </div>
         <button id="backBtn">Back to Search</button>`;
-      
-        document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
-  document.getElementById("backBtn").addEventListener("click", backToSearch);
+  document.getElementById(
+    'images'
+  ).innerHTML += `<img src=${newObj[id].image} width="250px">`;
+
+  document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 function showDetailInfoFilms(data, id) {
   moreButtonPressed();
 
+  newObj = data.map((item, i) => ({ ...item, image: movieImages[i] }));
+  console.log(newObj);
 
-newObj = data.map((item, i)=>({...item, image: movieImages[i]}));
-console.log(newObj);
-
-  document.getElementById("detailView").innerHTML += `<div class="">
+  document.getElementById('detailView').innerHTML += `<div class="">
         <div class="">
         <span id="name">${data[id].title}</span>
         <div>
@@ -183,23 +183,23 @@ console.log(newObj);
         </div>
         <button id="backBtn">Back to Search</button>
         `;
-        console.log(movieImages);
-        
-        document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
+  console.log(movieImages);
 
+  document.getElementById(
+    'images'
+  ).innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
-  document.getElementById("backBtn").addEventListener("click", backToSearch);
+  document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
-
 
 function showDetailInfoVehicles(data, id) {
   moreButtonPressed();
 
-  newObj = data.map((item, i)=>({...item, image: vehiclesImages[i]}));
+  newObj = data.map((item, i) => ({ ...item, image: vehiclesImages[i] }));
   console.log(newObj);
 
   document.getElementById(
-    "detailView"
+    'detailView'
   ).innerHTML += `<span id="name">${data[id].name}</span>
         <div>
           <ul>
@@ -220,34 +220,32 @@ function showDetailInfoVehicles(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-        document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
+  document.getElementById(
+    'images'
+  ).innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
-  document.getElementById("backBtn").addEventListener("click", backToSearch);
-
-
+  document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
 /**
  * Hides the search results and displays the detail view
  */
- function moreButtonPressed() {
+function moreButtonPressed() {
   let result = document.getElementById('result');
   result.style.display = 'none';
-  //document.getElementById('searchHeader').style.display = 'none';  
-
+  document.getElementById('searchHeader').style.visibility = 'hidden'; //SearchHeader hidden
 }
 
 /**
-* Hides the detailview and show the search page again
-*/
-function backToSearch() {    
-  let detailView = document.getElementById('detailView'); 
+ * Hides the detailview and show the search page again
+ */
+function backToSearch() {
+  let detailView = document.getElementById('detailView');
   //detailView.style.display = 'none';
   document.getElementById('detailView').innerHTML = ``; //Empty detailsView
   document.getElementById('images').innerHTML = ``;
   result.style.display = 'grid'; // Go back to display grid
-  document.getElementById('searchHeader').style.display = 'flex'; //SearchHeader flex
-  
+  document.getElementById('searchHeader').style.visibility = 'visible'; //SearchHeader visible
 }
 
 /**
@@ -255,14 +253,11 @@ function backToSearch() {
  * be shown for the user.
  */
 async function fetchAttributeInfo(url) {
- try{
-  const res = await fetch(url);
-  let data = await res.json();
-     return data.name 
-}
- catch(err){
+  try {
+    const res = await fetch(url);
+    let data = await res.json();
+    return data.name;
+  } catch (err) {
     console.log('There was an error!!', err);
- };
-};
-
-
+  }
+}
