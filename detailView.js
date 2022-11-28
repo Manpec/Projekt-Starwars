@@ -2,12 +2,12 @@
  *      Buggar
  * 
  * 
- *      - När man trycker på more knappen, sen back to search knappen och sen more knappen igen försvinner allting
+ *      
  * 
  *      
  *      Styling saker
  *     
- *      - När searchrutan försvinner i detaljvyn flyttar sig loggan
+ *      
  * 
  
  */
@@ -28,7 +28,7 @@ function showDetailInfoStarships(data, id) {
   document.getElementById(
     "detailView"
   ).innerHTML += `<span id="name">${data[id].name}</span>
-        <div>
+        <div class="allInfo">
           <ul>
             <li><strong>Carco Capacity:</strong> ${data[id].cargo_capacity}</li>
             <li><strong>Passengers:</strong> ${data[id].passengers}</li>
