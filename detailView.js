@@ -1,24 +1,9 @@
-/**
- *      Buggar
- * 
- * 
- *      
- * 
- *      
- *      Styling saker
- *     
- *      
- * 
- 
- */
 
+//#region Display Detail Info
 /**
  * Functions that will hide the result and show the detailview of the choosen category
  * Id is used to identify the selected index of the data array
  */
-
-
-
 function showDetailInfoStarships(data, id) {
   moreButtonPressed();
 
@@ -159,13 +144,10 @@ console.log(newObj);
   document.getElementById("backBtn").addEventListener("click", backToSearch);
 }
 function showDetailInfoFilms(data, id) {
-  moreButtonPressed();
+    moreButtonPressed();
+    newObj = data.map((item, i)=>({...item, image: movieImages[i]}));
 
-
-newObj = data.map((item, i)=>({...item, image: movieImages[i]}));
-console.log(newObj);
-
-  document.getElementById("detailView").innerHTML += `<div class="">
+    document.getElementById("detailView").innerHTML += `<div class="">
         <div class="">
         <span id="name">${data[id].title}</span>
         <div>
@@ -178,25 +160,20 @@ console.log(newObj);
             <li><strong>Opening Crawl:</strong> ${data[id].opening_crawl}</li>
           </ul>
         </div>
-        
         </div>
         </div>
         <button id="backBtn">Back to Search</button>
         `;
-        console.log(movieImages);
-        
-        document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
-
-  document.getElementById("backBtn").addEventListener("click", backToSearch);
+    document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
+    document.getElementById("backBtn").addEventListener("click", backToSearch);
 }
 
 
 function showDetailInfoVehicles(data, id) {
-  moreButtonPressed();
+    moreButtonPressed();
 
-  newObj = data.map((item, i)=>({...item, image: vehiclesImages[i]}));
-  console.log(newObj);
+    newObj = data.map((item, i)=>({...item, image: vehiclesImages[i]}));
 
   document.getElementById(
     "detailView"
@@ -227,6 +204,8 @@ function showDetailInfoVehicles(data, id) {
 
 }
 
+//#endregion
+
 /**
  * Hides the search results and displays the detail view
  */
@@ -241,8 +220,6 @@ function showDetailInfoVehicles(data, id) {
 * Hides the detailview and show the search page again
 */
 function backToSearch() {    
-  let detailView = document.getElementById('detailView'); 
-  //detailView.style.display = 'none';
   document.getElementById('detailView').innerHTML = ``; //Empty detailsView
   document.getElementById('images').innerHTML = ``;
   result.style.display = 'grid'; // Go back to display grid
