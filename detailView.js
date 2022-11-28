@@ -256,20 +256,15 @@ function backToSearch() {
  * Fetches the correct attribute based on the response that is in the data object and returns it to
  * be shown for the user.
  */
-function fetchAttributeInfo(url) {
-
-  const homeworld = fetch(url)
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      }      
-    })
-    .then((data)=> data.name)
-    .catch(() => {
-      return "";
-    }); 
-return homeworld
+async function fetchAttributeInfo(url) {
+ try{
+  const res = await fetch(url);
+  let data = await res.json();
+     return data.name 
 }
-
+ catch(err){
+    console.log('There was an error!!', err);
+ };
+};
 
 
