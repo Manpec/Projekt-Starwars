@@ -8,7 +8,9 @@ document.getElementById('search').addEventListener('keyup', (event) => {
 function empty() {  
   results = [];  //Empty results array
 }
+
 let results = []; // An empty array to fill using a loop
+
 async function starwarsSearch() {
   document.getElementById('mainTitle').innerHTML = ``; //Removes animation 
   let loader = `<div class="boxLoading"></div>`; //loading spinner starts

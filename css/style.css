@@ -5,11 +5,13 @@
   margin: auto;
 
 }
+
 body{
   background-color: black;
   background-image: url("wallpaperflare.com_wallpaper.jpg")  !important;  
   background-repeat: no-repeat;
-  background-size: 1300px;
+  background-size: cover;
+  background-attachment: fixed;
   /*background-size: cover ;*/
 }
 a {
@@ -108,9 +110,8 @@ footer {
   
 }
 #detailView {
-  width: 500px;
- 
-
+  width: 40%;
+  background-color: rgb(64, 42, 53);
 }
 #detailView button {
   border: solid 3px yellow;
@@ -137,4 +138,6 @@ footer {
   display: flex;
   
 }
-
+#images {
+margin-left: 20px;
+}
