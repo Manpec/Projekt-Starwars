@@ -27,7 +27,7 @@ async function starwarsSearch() {
     renderData(results, select); //results = an array of objectresults, select = the option we chose-> people, vehicles, starships, planets, movies
     if (data.count === 0) {
       // If search term can't be found show this message
-      result.innerHTML = `Couldn't find what you're looking for. Please try again!`;
+      document.getElementById('result').innerHTML = `Couldn't find what you're looking for. Please try again!`;
     } else {
 console.log(results)
     }
