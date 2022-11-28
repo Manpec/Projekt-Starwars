@@ -1,22 +1,9 @@
-/**
- *      Buggar
- * 
- * 
- *      
- * 
- *      
- *      Styling saker
- *     
- *      
- * 
- 
- */
 
+//#region Display Detail Info
 /**
  * Functions that will hide the result and show the detailview of the choosen category
  * Id is used to identify the selected index of the data array
  */
-
 function showDetailInfoStarships(data, id) {
   moreButtonPressed();
 
@@ -160,7 +147,8 @@ async function showDetailInfoPeople(data, id) {
   document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 function showDetailInfoFilms(data, id) {
-  moreButtonPressed();
+    moreButtonPressed();
+    newObj = data.map((item, i)=>({...item, image: movieImages[i]}));
 
   newObj = data.map((item, i) => ({ ...item, image: movieImages[i] }));
   console.log(newObj);
@@ -178,7 +166,6 @@ function showDetailInfoFilms(data, id) {
             <li><strong>Opening Crawl:</strong> ${data[id].opening_crawl}</li>
           </ul>
         </div>
-        
         </div>
         </div>
         <button id="backBtn">Back to Search</button>
@@ -193,7 +180,7 @@ function showDetailInfoFilms(data, id) {
 }
 
 function showDetailInfoVehicles(data, id) {
-  moreButtonPressed();
+    moreButtonPressed();
 
   newObj = data.map((item, i) => ({ ...item, image: vehiclesImages[i] }));
   console.log(newObj);
@@ -226,6 +213,8 @@ function showDetailInfoVehicles(data, id) {
 
   document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
+
+//#endregion
 
 /**
  * Hides the search results and displays the detail view

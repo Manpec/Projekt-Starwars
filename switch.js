@@ -1,5 +1,7 @@
-function renderData(data, option) {
+function renderSeachData(data, option) {
+  document.getElementById('loading').innerHTML = ``; //removes html from id loading when call is done
   document.getElementById('result').innerHTML = ''; //Resets the innerHTML to prevent previous searches to render on the website
+  
   switch (
     option //a switch which gets the parameter option which is one of [people, starships, and so on]
   ) {
@@ -36,6 +38,10 @@ function renderData(data, option) {
   }
 }
 
+//#region Print Result Tags
+/**
+ * Functions that adds the html to display the search results for the user
+ */
 function printStarshipToResultTag(data) {
   for (let i = 0; i < data.length; i++) {
     //for loop based on the length of the search results we get
@@ -124,6 +130,7 @@ function printErrorToResultTag() {
     <p>Couldn't find what you're looking for. Please try again!</p>
   </div>`;
 }
+//#endregion
 
 /**
  * Generates the click-eventlistener for all the available more buttons for the search result

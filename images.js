@@ -1,3 +1,7 @@
+/**
+ * This script contains some of the images used for the detailView.
+ */
+
 var movieImages = [
   "https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg" ,
   "https://upload.wikimedia.org/wikipedia/en/3/3f/The_Empire_Strikes_Back_%281980_film%29.jpg" ,

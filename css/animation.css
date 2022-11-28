@@ -5,10 +5,10 @@
 .wars {
   animation: wars 10s ease-out;
 }
-.byline span {
+.byLine span {
   animation: spin-letters 10s linear;
 }
-.byline {
+.byLine {
   animation: move-byline 10s linear;
 }
 
@@ -95,13 +95,13 @@
   width: 34em;
 }
 
-.byline span {
+.byLine span {
   display: inline-block;
 }
 
 .star,
 .wars,
-.byline {
+.byLine {
   position: absolute;
 }
 
@@ -113,7 +113,7 @@
   bottom: -1.5em;
 }
 
-.byline {
+.byLine {
   color: #fff;
   /* font-family: 'ITC Serif Gothic', Lato; */
   font-size: 1.2em;
@@ -144,7 +144,7 @@
   justify-content: center;
   height: 100%;
   perspective: 400px;
-  font-family: 'Pathway Gothic One', sans-serif;
+  font-family: "Pathway Gothic One", sans-serif;
   font-size: 200%;
   font-weight: 600;
   letter-spacing: 6px;
