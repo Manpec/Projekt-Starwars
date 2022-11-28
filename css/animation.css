@@ -1,199 +1,194 @@
-
-
 /* Animation properties */
 .star {
-    animation: star 10s ease-out infinite;
+  animation: star 10s ease-out;
+}
+.wars {
+  animation: wars 10s ease-out;
+}
+.byline span {
+  animation: spin-letters 10s linear;
+}
+.byline {
+  animation: move-byline 10s linear;
+}
+
+/* Keyframes */
+@keyframes star {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(-0.75em);
   }
-  .wars {
-    animation: wars 10s ease-out infinite;
+  20% {
+    opacity: 1;
   }
-  .byline span {
-    animation: spin-letters 10s linear infinite;
+  89% {
+    opacity: 1;
+    transform: scale(1);
   }
-  .byline {
-    animation: move-byline 10s linear infinite;
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
   }
-  
-  /* Keyframes */
-  @keyframes star {
-    0% {
-      opacity: 0;
-      transform: scale(1.5) translateY(-0.75em);
-    }
-    20% {
-      opacity: 1;
-    }
-    89% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    100% {
-      opacity: 0;
-      transform: translateZ(-1000em);
-    }
+}
+
+@keyframes wars {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(0.5em);
   }
-  
-  @keyframes wars {
-    0% {
-      opacity: 0;
-      transform: scale(1.5) translateY(0.5em);
-    }
-    20% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    100% {
-      opacity: 0;
-      transform: translateZ(-1000em);
-    }
+  20% {
+    opacity: 1;
   }
-  
-  @keyframes spin-letters {
-    0%, 10% {
-      opacity: 0;
-      transform: rotateY(90deg);
-    }
-    30% {
-      opacity: 1;
-    }
-    70%, 86% {
-      transform: rotateY(0);
-      opacity: 1;
-    }
-    95%, 100% {
-      opacity: 0;
-    }
+  90% {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  @keyframes move-byline {
-    0% {
-      transform: translateZ(5em);
-    }
-    100% {
-      transform: translateZ(0);
-    }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
   }
-  
-  /* Make the 3D work on the container */
+}
+
+@keyframes spin-letters {
+  0%,
+  10% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  70%,
+  86% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move-byline {
+  0% {
+    transform: translateZ(5em);
+  }
+  100% {
+    transform: translateZ(0);
+  }
+}
+
+/* Make the 3D work on the container */
+.starwars-demo {
+  perspective: 800px;
+  transform-style: preserve3d;
+}
+
+/* General styles and layout */
+
+.starwars-demo {
+  height: 10em;
+  left: 40%;
+  position: absolute;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  width: 34em;
+}
+
+.byline span {
+  display: inline-block;
+}
+
+.star,
+.wars,
+.byline {
+  position: absolute;
+}
+
+.star {
+  top: -2.75em;
+}
+
+.wars {
+  bottom: -1.5em;
+}
+
+.byline {
+  color: #fff;
+  font-family: 'ITC Serif Gothic', Lato;
+  font-size: 1.2em;
+  left: -2em;
+  letter-spacing: 0.53em;
+  right: -2em;
+  text-align: center;
+  text-transform: uppercase;
+  top: 25%;
+}
+
+/*** Media queries for adjusting to different screen sizes ***/
+
+@media only screen and (max-width: 600px) {
   .starwars-demo {
-    perspective: 800px;
-    transform-style: preserve3d;
+    font-size: 10px;
   }
-  
-  /* General styles and layout */
-  
-  
+}
+
+@media only screen and (max-width: 480px) {
   .starwars-demo {
-    height: 10em;
-    left: 40%;
-    position: absolute;
-    top: 60%;
-    transform: translate(-50%, -50%);
-    width: 34em;
+    font-size: 7px;
   }
-  
-  .byline span {
-    display: inline-block;
-  }
-  
-  
-  
-  .star, .wars, .byline {
-    position: absolute;
-  }
-  
-  .star {
-    top: -2.75em;
-  }
-  
-  .wars {
-    bottom: -1.5em;
-  }
-  
-  .byline {
-    color: #fff;
-    font-family: "ITC Serif Gothic", Lato;
-    font-size: 1.27em;
-    left: -2em;
-    letter-spacing: 0.4em;
-    right: -2em;
-    text-align: center;
-    text-transform: uppercase;
-    top: 29%;
-  }
-  
-  /*** Media queries for adjusting to different screen sizes ***/
-  
-  @media only screen and (max-width: 600px) {
-    .starwars-demo {
-      font-size: 10px;
-    }
-  }
-  
-  @media only screen and (max-width: 480px) {
-    .starwars-demo {
-      font-size: 7px;
-    }
-  }
-  
+}
+
 .star-wars {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    perspective: 400px;
-    font-family: "Pathway Gothic One", sans-serif;
-    font-size: 200%;
-    font-weight: 600;
-    letter-spacing: 6px;
-  
-    text-align: justify;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  perspective: 400px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 200%;
+  font-weight: 600;
+  letter-spacing: 6px;
+
+  text-align: justify;
+}
+.crawl {
+  position: relative;
+  top: 30px;
+  transform-origin: 50% 100%;
+}
+
+@keyframes crawl {
+  0% {
+    top: 0;
+    transform: rotateX(20deg) translateZ(0);
   }
-  .crawl {
-    position: relative;
-    top: 30px;
-    transform-origin: 50% 100%;
+  100% {
+    top: -5000px;
+    transform: rotateX(25deg) translateZ(-2500px);
   }
-  
-  @keyframes crawl {
-    0% {
-     
-      top: 0;
-      transform: rotateX(20deg) translateZ(0);
-  
-      
-    }
-    100% {    
-  
-      top: -5000px;
-      transform: rotateX(25deg) translateZ(-2500px);
-  
-    }
+}
+.crawl {
+  position: absolute;
+  transform-origin: 50% 100%;
+  animation: crawl 360s linear;
+}
+.boxLoading {
+  margin: auto;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid yellow;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+.loading {
+  display: hidden;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  .crawl {
-    position: absolute;
-    transform-origin: 50% 100%;
-    animation: crawl 360s linear;
+  100% {
+    transform: rotate(360deg);
   }
-  .boxLoading {
-    margin: auto;
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid yellow;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-  }
-  .loading {
-    display: hidden;
-  }
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+}

@@ -1,19 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
   text-align: center;
-
   color: yellow;
   margin: auto;
-
+  font-family: 'Poppins', sans-serif;
+  caret-color: transparent;
 }
 
-body{
+body {
   background-color: black;
-  background-image: url("wallpaperflare.com_wallpaper.jpg")  !important;  
+  background-image: url('wallpaperflare.com_wallpaper.jpg') !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   /*background-size: cover ;*/
 }
+
 a {
   color: yellow;
 }
@@ -22,122 +25,156 @@ header {
   padding: 60;
 
   margin-bottom: 10px;
-
 }
+
 #header {
   z-index: 1000;
   position: relative;
   display: flex;
 }
+
 #searchHeader {
   display: flex;
   flex-direction: column;
 }
-select {
-  margin: 5px;
-}
+
 button {
   margin: 5px;
+  cursor: pointer;
+  border: none;
 }
+
 input {
   border: solid 3px yellow;
+  border-radius: 5px;
   margin: 5px;
   background-color: black;
+  outline: none;
+  caret-color: yellow;
 }
+
 select {
   border: solid 3px yellow;
+  border-radius: 5px;
   background-color: black;
+  margin: 5px;
+  outline: none;
 }
+
 #searchBtn {
   border: solid 3px yellow;
+  border-radius: 5px;
   color: yellow;
   background-color: black;
 }
+
 li {
   list-style: none;
 }
+
 footer {
   display: flex;
 }
 
 #result {
   margin-top: 20px;
+  margin-bottom: 20px;
   display: grid;
   grid-template-columns: auto auto auto;
- width: 80%;
-} 
+  width: 80%;
+  gap: 20px;
+}
 
 .infoCards {
-  background-color: rgb(64, 42, 53);
+  background-color: rgb(43 43 43 / 70%);
   width: 95%;
   height: 300px;
-  border: 1px solid gray;
-
   height: 100%;
- 
   display: inline;
-  
-  
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgb(21, 21, 21);
 }
+
 .infoCards ul {
-  background-color: rgb(64, 42, 53);
+  background-color: transparent;
   padding-inline-start: 0px !important;
 }
+
 .infoCards li {
-  background-color: rgb(64, 42, 53);
+  background-color: transparent;
   padding: 10px;
-  color: gray;
-  
+  color: #dddcd8;
+  margin: 20px;
 }
+
 .infoCards li strong {
-  background-color: rgb(64, 42, 53);
+  background-color: transparent;
 }
-.infoCards h1{
+
+.infoCards h1 {
   background-color: gray;
 }
-.infoCards h3{
+.infoCards h3 {
   background-color: lightgray;
 }
-.infoCards button{
-  border-color: yellow;
+
+.infoCards button {
+  /* border-color: yellow; */
   background-color: black;
+  color: #dddcd8;
+  border-radius: 20px;
+  padding: 8px 25px;
 }
 
-
+.infoCards button:hover {
+  color: yellow;
+}
 
 #detailView > div {
   display: flex;
-  
 }
+
 #detailView {
-  width: 40%;
-  background-color: rgb(64, 42, 53);
+  background-color: rgb(43 43 43 / 70%);
+  border-radius: 15px;
 }
+
 #detailView button {
-  border: solid 3px yellow;
-  color: yellow;
-  padding: 10px;
+  background-color: black;
+  color: #dddcd8;
+  border-radius: 20px;
+  padding: 10px 25px;
+  margin-bottom: 30px;
 }
 
 #detailView button:hover {
-  color: black;
-  background-color: yellow;
+  color: yellow;
 }
 
 #detailView span {
+  display: inline-flex;
   font-weight: bold;
   font-size: 1.6rem;
+  margin: 30px 20px 0 20px;
+}
+
+#detailView ul {
+  padding: 20px;
 }
 
 #detailView li {
-  text-align: left;
   padding: 20px;
-  
+  color: #dddcd8;
 }
+
 .flexContainer {
   display: flex;
-  
+  height: 50vh;
+  width: 50vw;
 }
-#images {
-margin-left: 20px;
+
+#images img {
+  display: none;
+  /* border-radius: 15px;
+  margin-left: 50px; */
 }
