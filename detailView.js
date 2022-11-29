@@ -227,7 +227,7 @@ async function fetchAttributeInfo(url) {
       let data = await res.json();
       return data.name;
     }else{
-      return "n/a"
+      return 'n/a';
     }
   } catch (err) {
     console.log(err);

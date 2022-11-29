@@ -25,6 +25,6 @@
 
 
 # Förbättring för vidare utveckling
-- Välj på sidan i kategorien 'Species' --> 'Droid' --> 'More'. 'Droid' har ingen homeworld och svaret blir undefined. I console ser vi även att vår catch(err) från function fetchAttributeInfo(url) har skrivit ut i consolen. 
+
 
 
