@@ -5,8 +5,8 @@ async function executeSearch(results) {
   let selectedCategory = document.getElementById('select').value;
   let searchInput = document.getElementById('search').value;
   // The second input variable is neccesary because if you clear the searchInput insted of the input the search results will not be specified
-  let input = document.getElementById('searchBtn').value;
-  input = ''; // Clears input field after searching
+  let input = document.getElementById('search');
+  input.value = ''; // Clears input field after searching
 
   let url = `https://swapi.dev/api/${selectedCategory}/?search=${searchInput}`;
 
