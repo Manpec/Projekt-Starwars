@@ -174,7 +174,7 @@ footer {
 }
 
 #images img {
-  display: none;
-  /* border-radius: 15px;
-  margin-left: 50px; */
+  
+   border-radius: 15px;
+  margin-left: 50px; 
 }

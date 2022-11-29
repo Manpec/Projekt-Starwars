@@ -1,5 +1,5 @@
 function renderSeachData(data, option) {
-  document.getElementById('loading').innerHTML = ''; //Stops the loading spinner
+  
   document.getElementById('result').innerHTML = ''; //Resets the innerHTML to prevent previous searches to render on the website
   
   switch (

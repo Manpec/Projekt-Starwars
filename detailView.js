@@ -159,6 +159,24 @@ function showDetailInfoFilms(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>
         `;
+        console.log(data)
+        if(data[id].title == 'A New Hope') {
+          document.getElementById('images').innerHTML += `<img src=${movieImages[0]} width="250px">`
+        } else if(data[id].title == 'The Empire Strikes Back') {
+          document.getElementById('images').innerHTML += `<img src=${movieImages[1]} width="250px">`
+        }
+        else if(data[id].title == 'Return of the Jedi') {
+          document.getElementById('images').innerHTML += `<img src=${movieImages[2]} width="250px">`
+        }
+        else if(data[id].title == 'The Phantom Menace') {
+          document.getElementById('images').innerHTML += `<img src=${movieImages[3]} width="250px">`
+        }
+        else if(data[id].title == 'Attack of the Clones') {
+          document.getElementById('images').innerHTML += `<img src=${movieImages[4]} width="250px">`
+        }
+        else if(data[id].title == 'Revenge of the Sith') {
+          document.getElementById('images').innerHTML += `<img src=${movieImages[5]} width="250px">`
+        }
     //document.getElementById('images').innerHTML += `<img src=${newObj[id].image} width="250px">`;
     document.getElementById('backBtn').addEventListener("click", backToSearch);
 }

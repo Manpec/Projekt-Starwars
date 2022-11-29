@@ -42,7 +42,7 @@ async function executeSearch(results) {
   }
 
   } while (url); //The do...while statements will be executed as long as the url string contains something
-
+document.getElementById('loading').innerHTML = ''; //Stops the loading spinner
 }
 
 function startSearchSpinner() {
