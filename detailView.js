@@ -161,13 +161,8 @@ function showDetailInfoFilms(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>
         `;
-  console.log(movieImages);
-
-  document.getElementById(
-    'images'
-  ).innerHTML += `<img src=${newObj[id].image} width="250px">`;
-
-  document.getElementById('backBtn').addEventListener('click', backToSearch);
+    document.getElementById('images').innerHTML += `<img src=${newObj[id].image} width="250px">`;
+    document.getElementById('backBtn').addEventListener("click", backToSearch);
 }
 
 function showDetailInfoVehicles(data, id) {
@@ -196,18 +191,12 @@ function showDetailInfoVehicles(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-  document.getElementById(
-    'images'
-  ).innerHTML += `<img src=${newObj[id].image} width="250px">`;
+  document.getElementById('images').innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
   document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
 //#endregion
-
-function showImages() {
-    
-}
 
 /**
  * Hides the search results and displays the detail view
