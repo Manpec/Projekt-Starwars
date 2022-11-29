@@ -1,9 +1,5 @@
 function renderSeachData(data, option) {
-<<<<<<< HEAD
   document.getElementById('loading').innerHTML = ``; //Stops the loading spinner
-=======
-  document.getElementById('loading').innerHTML = ``; //removes html from id loading when call is done
->>>>>>> 6abef29b2826e0ac9347e35d66cbbd0048964726
   document.getElementById('result').innerHTML = ''; //Resets the innerHTML to prevent previous searches to render on the website
   
   switch (
@@ -42,17 +38,10 @@ function renderSeachData(data, option) {
   }
 }
 
-<<<<<<< HEAD
-/**
- * Functions that adds the html to display the search results for the user
- */
-//#region Print Result Tags
-=======
 //#region Print Result Tags
 /**
  * Functions that adds the html to display the search results for the user
  */
->>>>>>> 6abef29b2826e0ac9347e35d66cbbd0048964726
 function printStarshipToResultTag(data) {
   for (let i = 0; i < data.length; i++) {
     //for loop based on the length of the search results we get
