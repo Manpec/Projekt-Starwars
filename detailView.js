@@ -223,9 +223,14 @@ function backToSearch() {
  */
 async function fetchAttributeInfo(url) {
   try {
-    const res = await fetch(url);
-    let data = await res.json();
-    return data.name;
+    if(url){
+
+      const res = await fetch(url);
+      let data = await res.json();
+      return data.name;
+    }else{
+      return "n/a"
+    }
   } catch (err) {
     console.log('There was an error!!', err);
   }
