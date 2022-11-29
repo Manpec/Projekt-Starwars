@@ -6,21 +6,22 @@
 function init() {
     addCategoriesToSelection();
     setUpStartPageAnimation();
-    executeSearch();
+    searchHandler();
   }
 
 
-function executeSearch() {
-  let results = []; // An empty array to fill using a loop
+function searchHandler() {
+  let results = []; //An empty array used to fill with the search results
+  
   //Executes the search function when the user clicks the searchBtn
   document.getElementById('searchBtn').addEventListener('click', () => {
-    starwarsSearch(results);
+    executeSearch(results);
     results = [] // Empty results array otherwise we keep building the array forever 
     }); 
   //Executes the search function when the user presses the enter key
   document.getElementById('search').addEventListener('keyup', (event) => {
     if (event.code === 'Enter') {
-      starwarsSearch(results);
+      executeSearch(results);
       results = [] // Empty results array otherwise we keep building the array forever 
     }
   });

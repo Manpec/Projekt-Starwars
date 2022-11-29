@@ -1,5 +1,5 @@
 function renderSeachData(data, option) {
-  document.getElementById('loading').innerHTML = ``; //removes html from id loading when call is done
+  document.getElementById('loading').innerHTML = ``; //Stops the loading spinner
   document.getElementById('result').innerHTML = ''; //Resets the innerHTML to prevent previous searches to render on the website
   
   switch (
@@ -38,10 +38,10 @@ function renderSeachData(data, option) {
   }
 }
 
-//#region Print Result Tags
 /**
  * Functions that adds the html to display the search results for the user
  */
+//#region Print Result Tags
 function printStarshipToResultTag(data) {
   for (let i = 0; i < data.length; i++) {
     //for loop based on the length of the search results we get

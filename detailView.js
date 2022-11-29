@@ -8,11 +8,9 @@ function showDetailInfoStarships(data, id) {
   moreButtonPressed();
 
   //newObj = data.map((item, i)=>({...item, image: starshipsImages[i]}));
-  //console.log(newObj);
 
-  document.getElementById(
-    'detailView'
-  ).innerHTML += `<span id="name">${data[id].name}</span>
+  document.getElementById('detailView').innerHTML += 
+        `<span id="name">${data[id].name}</span>
         <div class="allInfo">
           <ul>
             <li><strong>Carco Capacity:</strong> ${data[id].cargo_capacity}</li>
@@ -41,11 +39,9 @@ async function showDetailInfoSpecies(data, id) {
   moreButtonPressed();
 
   // newObj = data.map((item, i)=>({...item, image: speciesImages[i]}));
-  // console.log(newObj);
 
-  document.getElementById('detailView').innerHTML += `<span id="name">${
-    data[id].name
-  }</span>
+  document.getElementById('detailView').innerHTML += 
+        `<span id="name">${data[id].name}</span>
         <div>
           <ul>
             <li><strong>Average Height:</strong> ${data[id].average_height}</li>
@@ -80,9 +76,8 @@ function showDetailInfoPlanets(data, id) {
   //newObj = data.map((item, i)=>({...item, image: planetsImages[i]}));
   //console.log(newObj);
 
-  document.getElementById(
-    'detailView'
-  ).innerHTML += `<span id="name">${data[id].name}</span>
+  document.getElementById('detailView').innerHTML += 
+        `<span id="name">${data[id].name}</span>
         <div>
           <ul>
             <li><strong>Climate:</strong> ${data[id].climate}</li>
@@ -111,12 +106,9 @@ async function showDetailInfoPeople(data, id) {
   moreButtonPressed();
 
   newObj = data.map((item, i) => ({ ...item, image: peopleImages[i] }));
-  console.log(newObj);
 
-  //const homeworld = await fetchAttributeInfo(data[id].homeworld)
-  document.getElementById('detailView').innerHTML += `<span id="name">${
-    data[id].name
-  }</span>
+  document.getElementById('detailView').innerHTML += 
+        `<span id="name">${data[id].name}</span>
         <div>
           <ul>
             <li><strong>Birth Year:</strong> ${data[id].birth_year}</li>
@@ -146,14 +138,13 @@ async function showDetailInfoPeople(data, id) {
 
   document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
+
 function showDetailInfoFilms(data, id) {
     moreButtonPressed();
     newObj = data.map((item, i)=>({...item, image: movieImages[i]}));
 
-  newObj = data.map((item, i) => ({ ...item, image: movieImages[i] }));
-  console.log(newObj);
-
-  document.getElementById('detailView').innerHTML += `<div class="">
+    document.getElementById('detailView').innerHTML += 
+        `<div class="">
         <div class="">
         <span id="name">${data[id].title}</span>
         <div>
@@ -183,11 +174,9 @@ function showDetailInfoVehicles(data, id) {
     moreButtonPressed();
 
   newObj = data.map((item, i) => ({ ...item, image: vehiclesImages[i] }));
-  console.log(newObj);
 
-  document.getElementById(
-    'detailView'
-  ).innerHTML += `<span id="name">${data[id].name}</span>
+  document.getElementById('detailView').innerHTML += 
+        `<span id="name">${data[id].name}</span>
         <div>
           <ul>
             <li><strong>Cargo Capacity:</strong> ${data[id].cargo_capacity}</li>
@@ -216,6 +205,10 @@ function showDetailInfoVehicles(data, id) {
 
 //#endregion
 
+function showImages() {
+    
+}
+
 /**
  * Hides the search results and displays the detail view
  */
@@ -229,8 +222,6 @@ function moreButtonPressed() {
  * Hides the detailview and show the search page again
  */
 function backToSearch() {
-  let detailView = document.getElementById('detailView');
-  //detailView.style.display = 'none';
   document.getElementById('detailView').innerHTML = ``; //Empty detailsView
   document.getElementById('images').innerHTML = ``;
   result.style.display = 'grid'; // Go back to display grid
