@@ -13,6 +13,6 @@ async function addCategoriesToSelection() {
         document.getElementById('select').innerHTML += `<option value="${category}">${category}</option>`;
       };
   } catch(err){
-    console.log('There was an error!!', err);
+    console.log(err);
   };
 };

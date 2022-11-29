@@ -1,4 +1,22 @@
 
+function searchHandler() {
+  
+  let results = []; //An empty array used to fill with the search results
+  
+  //Executes the search function when the user clicks the searchBtn
+  document.getElementById('searchBtn').addEventListener('click', () => {
+    executeSearch(results);
+    results = []; // Empty results array otherwise we keep building the array forever 
+    }); 
+  //Executes the search function when the user presses the enter key
+  document.getElementById('search').addEventListener('keyup', (event) => {
+    if (event.code === 'Enter') {
+      executeSearch(results);
+      results = []; // Empty results array otherwise we keep building the array forever 
+    }
+  });
+}
+
 async function executeSearch(results) {
   startSearchSpinner();
   
@@ -28,7 +46,7 @@ async function executeSearch(results) {
 }
 
 function startSearchSpinner() {
-  document.getElementById('mainTitle').innerHTML = ``; //Removes animation
+  document.getElementById('mainTitle').innerHTML = ''; //Removes animation
   let loader = `<div class="boxLoading"></div>`; //loading spinner starts
   document.getElementById('loading').innerHTML = loader; //div id loading gets html
 }

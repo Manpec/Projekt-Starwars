@@ -12,17 +12,19 @@
 
 ## TODO
 
-1 - antonia mergar Marcus branch till main. 
-2 - Mana ändrar till async await i filerna - categories och detailView. 
-3 - Loucie fixar bugg i detaljvy med sökfunktion och lite design. 
-4 - Josefine - ser över kodhygien och lägger till kommentarer & tydliga variabelnamn.  
+1 - vänta in övning 20 från Martin. Ta ställning till try/catch i async functions gällande error-callbacks eller error-events.
 
-Efterhand man blir klar med saker kommer nya uppgifter dyka upp. 
 
-Om du fastnar tveka inte att be om hjälp.
+2 - FRÅGA TILL MARCUS!!! 
+    För tillfället är alla bilder dolda då de som inte har bilder visar en trasig icon och det blir inte snyggt. Vi pratade om på mötet nyss att antingen tar vi bort bilderna för att lägga bild på alla kommer ta en eeeeevighet. Men vi tyckte det var så synd att ta bort alla bilder då du lagt tid på det. Så vår fråga är antingen tar vi bort bilderna, ELLER om du vill/kan göra så det blir snyggt för de som inte har bild. 
+
 
 ## Innan inlämning
 - Gå genom uppgiften tillsammans så alla förstår vad som gjorts.
 - Se över så all kod är enkel och läsbar samt enhetlig med tydliga variabelnamn enligt instruktion. 
+
+
+# Förbättring för vidare utveckling
+- Välj på sidan i kategorien 'Species' --> 'Droid' --> 'More'. 'Droid' har ingen homeworld och svaret blir undefined. I console ser vi även att vår catch(err) från function fetchAttributeInfo(url) har skrivit ut i consolen. 
 
 

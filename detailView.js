@@ -13,7 +13,7 @@ function showDetailInfoStarships(data, id) {
         `<span id="name">${data[id].name}</span>
         <div class="allInfo">
           <ul>
-            <li><strong>Carco Capacity:</strong> ${data[id].cargo_capacity}</li>
+            <li><strong>Cargo Capacity:</strong> ${data[id].cargo_capacity}</li>
             <li><strong>Passengers:</strong> ${data[id].passengers}</li>
             <li><strong>Starship Class:</strong> ${data[id].starship_class}</li>
           </ul>
@@ -74,7 +74,6 @@ function showDetailInfoPlanets(data, id) {
   moreButtonPressed();
 
   //newObj = data.map((item, i)=>({...item, image: planetsImages[i]}));
-  //console.log(newObj);
 
   document.getElementById('detailView').innerHTML += 
         `<span id="name">${data[id].name}</span>
@@ -105,7 +104,7 @@ function showDetailInfoPlanets(data, id) {
 async function showDetailInfoPeople(data, id) {
   moreButtonPressed();
 
-  newObj = data.map((item, i) => ({ ...item, image: peopleImages[i] }));
+  //newObj = data.map((item, i) => ({ ...item, image: peopleImages[i] }));
 
   document.getElementById('detailView').innerHTML += 
         `<span id="name">${data[id].name}</span>
@@ -132,16 +131,15 @@ async function showDetailInfoPeople(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-  document.getElementById(
-    'images'
-  ).innerHTML += `<img src=${newObj[id].image} width="250px">`;
+  //document.getElementById('images').innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
   document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
 function showDetailInfoFilms(data, id) {
     moreButtonPressed();
-    newObj = data.map((item, i)=>({...item, image: movieImages[i]}));
+
+    //newObj = data.map((item, i)=>({...item, image: movieImages[i]}));
 
     document.getElementById('detailView').innerHTML += 
         `<div class="">
@@ -161,14 +159,14 @@ function showDetailInfoFilms(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>
         `;
-    document.getElementById('images').innerHTML += `<img src=${newObj[id].image} width="250px">`;
+    //document.getElementById('images').innerHTML += `<img src=${newObj[id].image} width="250px">`;
     document.getElementById('backBtn').addEventListener("click", backToSearch);
 }
 
 function showDetailInfoVehicles(data, id) {
     moreButtonPressed();
 
-  newObj = data.map((item, i) => ({ ...item, image: vehiclesImages[i] }));
+  //newObj = data.map((item, i) => ({ ...item, image: vehiclesImages[i] }));
 
   document.getElementById('detailView').innerHTML += 
         `<span id="name">${data[id].name}</span>
@@ -191,7 +189,7 @@ function showDetailInfoVehicles(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-  document.getElementById('images').innerHTML += `<img src=${newObj[id].image} width="250px">`;
+  //document.getElementById('images').innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
   document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
@@ -227,6 +225,6 @@ async function fetchAttributeInfo(url) {
     let data = await res.json();
     return data.name;
   } catch (err) {
-    console.log('There was an error!!', err);
+    console.log(err);
   }
 }
