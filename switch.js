@@ -1,7 +1,8 @@
 function renderSeachData(data, option) {
-  
   document.getElementById('result').innerHTML = ''; //Resets the innerHTML to prevent previous searches to render on the website
-  
+  document.getElementById('result').classList.remove('error'); //Remove added error class
+  document.getElementById('result').classList.add('result');
+
   switch (
     option //a switch which gets the parameter option which is one of [people, starships, and so on]
   ) {
