@@ -238,16 +238,11 @@ function backToSearch() {
  * be shown for the user.
  */
 async function fetchAttributeInfo(url) {
-  try {
     if(url){
-
-      const res = await fetch(url);
-      let data = await res.json();
+      const response = await fetch(url).catch(errorHandler); // We catch the unwanted error with our function errorHander (displays in main.js)
+      let data = await response.json();
       return data.name;
-    }else{
+    } else{
       return 'n/a';
     }
-  } catch (err) {
-    console.log(err);
-  }
 }

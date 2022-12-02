@@ -10,3 +10,8 @@ function init() {
   }
 
 init();
+
+
+function errorHandler(err) {
+  console.error(err);
+}
