@@ -5,6 +5,11 @@ function searchHandler() {
   document.getElementById('searchBtn').addEventListener('click', () => {
     executeSearch(results);
     results = []; // Empty results array otherwise we keep building the array forever
+    document.getElementById('detailView').innerHTML = ``; //empty detailsView to search again
+    document.getElementById('images').innerHTML = ``;     //empty dimage to search again
+    document.getElementById('result').innerHTML = ``;     //Empty result before new search is done
+    let newResult = document.getElementById('result'); //Find result id
+    newResult.style.display = 'grid'; //Tell result id to display grid again
   });
   //Executes the search function when the user presses the enter key
   document.getElementById('search').addEventListener('keyup', (event) => {
