@@ -142,40 +142,6 @@
   }
 }
 
-.star-wars {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  perspective: 400px;
-  font-size: 200%;
-  font-weight: 600;
-  letter-spacing: 6px;
-
-  text-align: justify;
-}
-
-.crawl {
-  position: relative;
-  top: 30px;
-  transform-origin: 50% 100%;
-}
-
-@keyframes crawl {
-  0% {
-    top: 0;
-    transform: rotateX(20deg) translateZ(0);
-  }
-  100% {
-    top: -5000px;
-    transform: rotateX(25deg) translateZ(-2500px);
-  }
-}
-.crawl {
-  position: absolute;
-  transform-origin: 50% 100%;
-  animation: crawl 360s linear;
-}
-
 .boxLoading {
   margin: auto;
   border: 16px solid #f3f3f3;

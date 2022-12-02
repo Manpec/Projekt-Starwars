@@ -2,7 +2,12 @@ function searchHandler() {
   let results = []; //An empty array used to fill with the search results
 
   //Executes the search function when the user clicks the searchBtn
-  document.getElementById("searchBtn").addEventListener("click", () => {
+  document.getElementById("searchBtn").addEventListener("click", (event) => { 
+     //
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("searchBtn").click();
+      }
     executeSearch(results);
     results = []; // Empty results array otherwise we keep building the array forever
     document.getElementById('detailView').innerHTML = ``; //empty detailsView to search again
@@ -30,7 +35,7 @@ async function executeSearch(results) {
   let input = document.getElementById("search");
   input.value = ""; // Clears input field after searching
 
-  let url = `https://swapi.dev/api/${selectedCategory}/?search=${searchInput}`;
+  let url = `https://swapi.py4e.com/api/${selectedCategory}/?search=${searchInput}`;
 
   do {
     let response = await fetch(`${url}`).catch(errorHandler); // We catch the unwanted error with our function errorHander (displays in main.js)

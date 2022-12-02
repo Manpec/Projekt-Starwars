@@ -177,6 +177,9 @@ function showDetailInfoFilms(data, id) {
         else if(data[id].title == 'Revenge of the Sith') {
           document.getElementById('images').innerHTML += `<img src=${movieImages[5]} width="250px">`
         }
+        else if(data[id].title == 'The Force Awakens') {
+          document.getElementById('images').innerHTML += `<img src=${movieImages[6]} width="250px">`
+        }
     //document.getElementById('images').innerHTML += `<img src=${newObj[id].image} width="250px">`;
     document.getElementById('backBtn').addEventListener("click", backToSearch);
 }
