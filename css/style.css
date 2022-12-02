@@ -21,8 +21,6 @@ a {
 }
 
 header {
-  padding: 60;
-
   margin-bottom: 10px;
 }
 
@@ -65,6 +63,7 @@ select {
   border-radius: 5px;
   color: #ffe919;
   background-color: black;
+  outline: none;
 }
 
 li {
@@ -75,7 +74,7 @@ footer {
   display: flex;
 }
 
-#result {
+.result {
   margin-top: 20px;
   margin-bottom: 20px;
   display: grid;
@@ -84,10 +83,19 @@ footer {
   gap: 20px;
 }
 
+.error {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(36 36 36 / 70%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgb(21, 21, 21);
+  width: 30%;
+}
+
 .infoCards {
   background-color: rgb(36 36 36 / 70%);
   width: 95%;
-  height: 300px;
   height: 100%;
   display: inline;
   border-radius: 15px;
@@ -173,7 +181,11 @@ footer {
 }
 
 #images img {
-  
-   border-radius: 15px;
-  margin-left: 50px; 
+  border-radius: 15px;
+  margin-left: 50px;
+}
+
+#icon {
+  margin: auto 170px auto 10px;
+  cursor: pointer;
 }

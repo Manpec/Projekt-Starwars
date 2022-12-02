@@ -5,6 +5,11 @@ function searchHandler() {
   document.getElementById("searchBtn").addEventListener("click", () => {
     executeSearch(results);
     results = []; // Empty results array otherwise we keep building the array forever
+    document.getElementById('detailView').innerHTML = ``; //empty detailsView to search again
+    document.getElementById('images').innerHTML = ``;     //empty dimage to search again
+    document.getElementById('result').innerHTML = ``;     //Empty result before new search is done
+    let newResult = document.getElementById('result'); //Find result id
+    newResult.style.display = 'grid'; //Tell result id to display grid again
   });
   //Executes the search function when the user presses the enter key
   document.getElementById("search").addEventListener("keyup", (event) => {
@@ -18,8 +23,9 @@ function searchHandler() {
 async function executeSearch(results) {
   startSearchSpinner();
 
-  let selectedCategory = document.getElementById("select").value;
-  let searchInput = document.getElementById("search").value;
+  let selectedCategory = document.getElementById('select').value;
+  let searchInput = document.getElementById('search').value;
+  let errorMessage = document.getElementById('result');
   // The second input variable is neccesary because if you clear the searchInput insted of the input the search results will not be specified
   let input = document.getElementById("search");
   input.value = ""; // Clears input field after searching
@@ -36,13 +42,13 @@ async function executeSearch(results) {
 
       if (data.count === 0) {
         // If search term can't be found show this message
-        document.getElementById(
-          "result"
-        ).innerHTML = `Couldn't find what you're looking for. Please try again!`;
+        errorMessage.innerHTML = `Couldn't find what you're looking for. Please try again!`;
+        errorMessage.classList.remove('result');
+        errorMessage.classList.add('error');
       }
     }
   } while (url); //The do...while statements will be executed as long as the url string contains something
-  document.getElementById("loading").innerHTML = ""; //Stops the loading spinner
+  document.getElementById('loading').innerHTML = ''; //Stops the loading spinner
 }
 
 function startSearchSpinner() {
