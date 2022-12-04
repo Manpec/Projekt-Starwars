@@ -11,7 +11,7 @@ function init() {
 
 init();
 
-
+// Error handler for .catch
 function errorHandler(err) {
   console.error(err);
 }

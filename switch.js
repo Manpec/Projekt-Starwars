@@ -1,7 +1,7 @@
 function renderSeachData(data, option) {
   document.getElementById('result').innerHTML = ''; //Resets the innerHTML to prevent previous searches to render on the website
   document.getElementById('result').classList.remove('error'); //Remove added error class
-  document.getElementById('result').classList.add('result');
+  document.getElementById('result').classList.add('result'); //Add removed result class
 
   switch (
     option //a switch which gets the parameter option which is one of [people, starships, and so on]
@@ -9,18 +9,15 @@ function renderSeachData(data, option) {
     case 'starships':
       printStarshipToResultTag(data);
       generateMoreBtn(showDetailInfoStarships, data);
-
       break;
     case 'species':
       printSpeciesToResultTag(data);
       generateMoreBtn(showDetailInfoSpecies, data);
       break;
-
     case 'planets':
       printPlanetsToResultTag(data);
       generateMoreBtn(showDetailInfoPlanets, data);
       break;
-
     case 'people':
       printPeopleToResultTag(data);
       generateMoreBtn(showDetailInfoPeople, data);

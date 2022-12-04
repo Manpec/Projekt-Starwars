@@ -142,9 +142,7 @@ function showDetailInfoFilms(data, id) {
     //newObj = data.map((item, i)=>({...item, image: movieImages[i]}));
 
     document.getElementById('detailView').innerHTML += 
-        `<div class="">
-        <div class="">
-        <span id="name">${data[id].title}</span>
+        `<span id="name">${data[id].title}</span>
         <div>
           <ul>
             <li><strong>Director:</strong> ${data[id].director}</li>
@@ -155,29 +153,26 @@ function showDetailInfoFilms(data, id) {
             <li><strong>Opening Crawl:</strong> ${data[id].opening_crawl}</li>
           </ul>
         </div>
-        </div>
-        </div>
-        <button id="backBtn">Back to Search</button>
-        `;
+        <button id="backBtn">Back to Search</button>`;
         console.log(data)
-        if(data[id].title == 'A New Hope') {
+        if (data[id].title == 'A New Hope') {
           document.getElementById('images').innerHTML += `<img src=${movieImages[0]} width="250px">`
-        } else if(data[id].title == 'The Empire Strikes Back') {
+        } else if (data[id].title == 'The Empire Strikes Back') {
           document.getElementById('images').innerHTML += `<img src=${movieImages[1]} width="250px">`
         }
-        else if(data[id].title == 'Return of the Jedi') {
+        else if (data[id].title == 'Return of the Jedi') {
           document.getElementById('images').innerHTML += `<img src=${movieImages[2]} width="250px">`
         }
-        else if(data[id].title == 'The Phantom Menace') {
+        else if (data[id].title == 'The Phantom Menace') {
           document.getElementById('images').innerHTML += `<img src=${movieImages[3]} width="250px">`
         }
-        else if(data[id].title == 'Attack of the Clones') {
+        else if (data[id].title == 'Attack of the Clones') {
           document.getElementById('images').innerHTML += `<img src=${movieImages[4]} width="250px">`
         }
-        else if(data[id].title == 'Revenge of the Sith') {
+        else if (data[id].title == 'Revenge of the Sith') {
           document.getElementById('images').innerHTML += `<img src=${movieImages[5]} width="250px">`
         }
-        else if(data[id].title == 'The Force Awakens') {
+        else if (data[id].title == 'The Force Awakens') {
           document.getElementById('images').innerHTML += `<img src=${movieImages[6]} width="250px">`
         }
     //document.getElementById('images').innerHTML += `<img src=${newObj[id].image} width="250px">`;
@@ -200,7 +195,7 @@ function showDetailInfoVehicles(data, id) {
           <ul>
             <li><strong>Length:</strong> ${data[id].length}</li>
             <li><strong>Manufacturer:</strong> ${data[id].manufacturer}</li>
-            <li><strong>Max Atmospering Speed:</strong> ${data[id].max_atmosphering_speed}</li>
+            <li><strong>Max Atmosphering Speed:</strong> ${data[id].max_atmosphering_speed}</li>
           </ul>
           <ul>
             <li><strong>Model:</strong> ${data[id].model}</li>
@@ -230,8 +225,8 @@ function moreButtonPressed() {
  * Hides the detailview and show the search page again
  */
 function backToSearch() {
-  document.getElementById('detailView').innerHTML = ``; //Empty detailsView
-  document.getElementById('images').innerHTML = ``;
+  document.getElementById('detailView').innerHTML = ''; //Empty detailsView
+  document.getElementById('images').innerHTML = '';
   result.style.display = 'grid'; // Go back to display grid
   document.getElementById('searchHeader').style.visibility = 'visible'; //SearchHeader visible
 }
@@ -241,11 +236,11 @@ function backToSearch() {
  * be shown for the user.
  */
 async function fetchAttributeInfo(url) {
-    if(url){
+    if (url) {
       const response = await fetch(url).catch(errorHandler); // We catch the unwanted error with our function errorHander (displays in main.js)
       let data = await response.json();
       return data.name;
-    } else{
+    } else {
       return 'n/a';
     }
 }

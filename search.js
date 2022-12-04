@@ -1,26 +1,17 @@
 function searchHandler() {
   let results = []; //An empty array used to fill with the search results
-
   //Executes the search function when the user clicks the searchBtn
-  document.getElementById("searchBtn").addEventListener("click", (event) => { 
-     //
-    if (event.key === "Enter") {
-        event.preventDefault();
-        document.getElementById("searchBtn").click();
-      }
+  document.getElementById('searchBtn').addEventListener('click', () => {
     executeSearch(results);
     results = []; // Empty results array otherwise we keep building the array forever
-    document.getElementById('detailView').innerHTML = ``; //empty detailsView to search again
-    document.getElementById('images').innerHTML = ``;     //empty dimage to search again
-    document.getElementById('result').innerHTML = ``;     //Empty result before new search is done
-    let newResult = document.getElementById('result'); //Find result id
-    newResult.style.display = 'grid'; //Tell result id to display grid again
+    enableSearchInDetailView();
   });
   //Executes the search function when the user presses the enter key
-  document.getElementById("search").addEventListener("keyup", (event) => {
-    if (event.code === "Enter") {
+  document.getElementById('search').addEventListener('keyup', (event) => {
+    if (event.code === 'Enter') {
       executeSearch(results);
       results = []; // Empty results array otherwise we keep building the array forever
+      enableSearchInDetailView();
     }
   });
 }
@@ -32,8 +23,8 @@ async function executeSearch(results) {
   let searchInput = document.getElementById('search').value;
   let errorMessage = document.getElementById('result');
   // The second input variable is neccesary because if you clear the searchInput insted of the input the search results will not be specified
-  let input = document.getElementById("search");
-  input.value = ""; // Clears input field after searching
+  let input = document.getElementById('search');
+  input.value = ''; // Clears input field after searching
 
   let url = `https://swapi.py4e.com/api/${selectedCategory}/?search=${searchInput}`;
 
@@ -57,7 +48,15 @@ async function executeSearch(results) {
 }
 
 function startSearchSpinner() {
-  document.getElementById("mainTitle").innerHTML = ""; //Removes animation
+  document.getElementById('mainTitle').innerHTML = ''; //Removes animation
   let loader = `<div class="boxLoading"></div>`; //loading spinner starts
-  document.getElementById("loading").innerHTML = loader; //div id loading gets html
+  document.getElementById('loading').innerHTML = loader; //div id loading gets html
+}
+
+function enableSearchInDetailView() {
+  document.getElementById('detailView').innerHTML = ''; //empty detailsView to search again
+  document.getElementById('images').innerHTML = ''; //empty image to search again
+  document.getElementById('result').innerHTML = ''; //Empty result before new search is done
+  let newResult = document.getElementById('result'); //Find result id
+  newResult.style.display = 'grid'; //Tell result id to display grid again
 }
