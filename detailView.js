@@ -136,7 +136,7 @@ function showDetailInfoFilms(data, id) {
           </ul>
         </div>
         <button id="backBtn">Back to Search</button>`;
-        console.log(data)
+
         if (data[id].title == 'A New Hope') {
           document.getElementById('images').innerHTML += `<img src=${movieImages[0]} width="250px">`
         } else if (data[id].title == 'The Empire Strikes Back') {
