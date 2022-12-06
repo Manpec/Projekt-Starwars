@@ -3,7 +3,7 @@
 ## Kodstandard
 
 - Vanilla JavaScript, ingen jQuery
-- Single tics ‘’
+- Single tics ' '
 - Alla kommentarer och kodnamn ska vara på engelska
 - Camelcase
 - Viktigt med egna filer för de olika delarna av sidan för att undvika merge conflicts

@@ -7,8 +7,6 @@
 function showDetailInfoStarships(data, id) {
   moreButtonPressed();
 
-  //newObj = data.map((item, i)=>({...item, image: starshipsImages[i]}));
-
   document.getElementById('detailView').innerHTML += 
         `<span id="name">${data[id].name}</span>
         <div class="allInfo">
@@ -30,15 +28,11 @@ function showDetailInfoStarships(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-  // document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
-
   document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
 async function showDetailInfoSpecies(data, id) {
   moreButtonPressed();
-
-  // newObj = data.map((item, i)=>({...item, image: speciesImages[i]}));
 
   document.getElementById('detailView').innerHTML += 
         `<span id="name">${data[id].name}</span>
@@ -65,15 +59,11 @@ async function showDetailInfoSpecies(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-  // document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
-
   document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
 function showDetailInfoPlanets(data, id) {
   moreButtonPressed();
-
-  //newObj = data.map((item, i)=>({...item, image: planetsImages[i]}));
 
   document.getElementById('detailView').innerHTML += 
         `<span id="name">${data[id].name}</span>
@@ -96,15 +86,11 @@ function showDetailInfoPlanets(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-  // document.getElementById("images").innerHTML += `<img src=${newObj[id].image} width="250px">`;
-
   document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
 async function showDetailInfoPeople(data, id) {
   moreButtonPressed();
-
-  //newObj = data.map((item, i) => ({ ...item, image: peopleImages[i] }));
 
   document.getElementById('detailView').innerHTML += 
         `<span id="name">${data[id].name}</span>
@@ -131,15 +117,11 @@ async function showDetailInfoPeople(data, id) {
         </div>
         <button id="backBtn">Back to Search</button>`;
 
-  //document.getElementById('images').innerHTML += `<img src=${newObj[id].image} width="250px">`;
-
   document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
 
 function showDetailInfoFilms(data, id) {
     moreButtonPressed();
-
-    //newObj = data.map((item, i)=>({...item, image: movieImages[i]}));
 
     document.getElementById('detailView').innerHTML += 
         `<span id="name">${data[id].title}</span>
@@ -173,14 +155,11 @@ function showDetailInfoFilms(data, id) {
           document.getElementById('images').innerHTML += `<img src=${movieImages[5]} width="250px">`
         }
 
-    //document.getElementById('images').innerHTML += `<img src=${newObj[id].image} width="250px">`;
     document.getElementById('backBtn').addEventListener("click", backToSearch);
 }
 
 function showDetailInfoVehicles(data, id) {
     moreButtonPressed();
-
-  //newObj = data.map((item, i) => ({ ...item, image: vehiclesImages[i] }));
 
   document.getElementById('detailView').innerHTML += 
         `<span id="name">${data[id].name}</span>
@@ -202,8 +181,6 @@ function showDetailInfoVehicles(data, id) {
           </ul>
         </div>
         <button id="backBtn">Back to Search</button>`;
-
-  //document.getElementById('images').innerHTML += `<img src=${newObj[id].image} width="250px">`;
 
   document.getElementById('backBtn').addEventListener('click', backToSearch);
 }
