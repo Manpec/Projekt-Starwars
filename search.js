@@ -26,7 +26,7 @@ async function executeSearch(results) {
   let input = document.getElementById('search');
   input.value = ''; // Clears input field after searching
 
-  let url = `https://swapi.py4e.com/api/${selectedCategory}/?search=${searchInput}`;
+  let url = `https://swapi.dev/api/${selectedCategory}/?search=${searchInput}`;
 
   do {
     let response = await fetch(`${url}`).catch(errorHandler); // We catch the unwanted error with our function errorHander (displays in main.js)
