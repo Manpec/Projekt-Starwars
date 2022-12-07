@@ -193,7 +193,6 @@ function showDetailInfoVehicles(data, id) {
 function moreButtonPressed() {
   let result = document.getElementById('result');
   result.style.display = 'none';
- //document.getElementById('searchHeader').style.visibility = 'hidden'; //SearchHeader hidden
 }
 
 /**

@@ -120,7 +120,7 @@ function printFilmsToResultTag(data) {
       <li><button class="moreBtn" id=${i}>More</button></li>
       </ul>
   </div>`;
-  } // <br><br></p><p> ${data[i].opening_crawl}</p>
+  }
 }
 
 function printErrorToResultTag() {
